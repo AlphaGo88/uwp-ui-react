@@ -1,6 +1,6 @@
 ## uwp-ui-react
 
-UWP style web ui components.
+UWP style web ui components. [Read the docs.](https://alphago88.github.io/uwp-ui-react/)
 
 ![Demo](./docs/img/demo.png)
 
