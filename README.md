@@ -2,7 +2,7 @@
 
 UWP style web ui components.
 
-![Demo](./doc/img/demo.png)
+![Demo](./docs/img/demo.png)
 
 ## Table of Contents
 - [Quickstart](#quickstart)

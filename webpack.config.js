@@ -2,9 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './doc/doc',
+    entry: './docs/index',
     output: {
-        path: path.resolve(__dirname, 'doc'),
+        path: path.resolve(__dirname, 'docs'),
         filename: '[name].bundle.js'
     },
     devServer: {
