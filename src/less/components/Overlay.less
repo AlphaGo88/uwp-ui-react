@@ -1,0 +1,42 @@
+//
+// Overlay
+// --------------------------------------------------
+
+
+.f-Overlay-mask {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -10000px;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity .3s;
+    z-index: @overlay-z-index;
+    background-color: @overlay-mask-bg;
+
+    &.open {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.f-Overlay {
+	position: fixed;
+	width: @overlay-width-default;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: @overlay-z-index;
+	overflow: auto;
+	box-shadow: none;
+	transform: translateX(-110%);
+	transition: transform .3s;
+	outline: 0;
+
+	&.open {
+		box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
+		transform: translateX(0%); 
+	}
+}

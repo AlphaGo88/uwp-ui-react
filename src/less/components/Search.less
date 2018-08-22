@@ -1,0 +1,32 @@
+//
+// Search
+// --------------------------------------------------
+
+
+.f-Search {
+	display: inline-flex;
+	width: @input-width-default;
+
+	&.fullWidth {
+		display: flex;
+		width: 100%;
+	}
+	
+	> form {
+		flex: 1 1 auto;
+		width: 1px;
+		height: 100%;
+	}
+
+	[type="search"]::-webkit-search-cancel-button{
+	    display: none;
+	}
+
+	.f-Search-icon {
+		cursor: pointer;
+
+		&:hover {
+			color: @primary-color;
+		}
+	}
+}

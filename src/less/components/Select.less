@@ -1,0 +1,110 @@
+//
+// Select
+// --------------------------------------------------
+
+
+.f-Select {
+    position: relative;
+}
+
+.f-Select-trigger {
+    padding: 0 2.14285714rem 0 @input-padding-x;
+    user-select: none;
+    cursor: default;
+
+    &.underlined {
+        padding-left: 0;
+    }
+
+    .f-Icon {
+        margin-right: @input-padding-x;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: -0.28571429rem;
+        right: 0.85714286rem;
+        bottom: 0;
+        margin: auto 0;
+        width: 0.57142857rem;
+        height: 0.57142857rem;
+        border-right: 0.07142857rem solid @text-color-light1;
+        border-bottom: 0.07142857rem solid @text-color-light1;
+        transform: rotate(45deg);
+    }
+
+    &.disabled {
+        &:after {
+            border-right-color: @text-color-disabled;
+            border-bottom-color: @text-color-disabled;
+        }
+    }
+}
+
+.f-Select-options {
+    padding: @menu-padding-y 0;
+    background-color: #fff;
+
+    .f-Seperator {
+        width: 100%;
+        height: 0.07142857rem;
+        margin: 0.28571429rem 0;
+        border-bottom: 0.07142857rem solid @default-color;
+    }
+}
+
+.f-SelectItem,
+.f-SelectItem-header {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: @select-item-padding;
+    text-align: left;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: transparent;
+    .truncate();
+
+    > .f-Icon {
+        width: 1.14285714rem;
+        margin-right: @select-item-icon-margin-right;
+        text-align: center;
+    }
+}
+
+.f-SelectItem-header {
+    height: @select-item-height - 0.21428571rem;
+    line-height: @select-item-height - 0.21428571rem;
+    color: @primary-color;
+    font-weight: 600;
+}
+
+.f-SelectItem {
+    height: @select-item-height;
+    font-weight: 400;
+    color: @text-color-default;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    user-select: none;
+    -webkit-appearance: none;
+
+    &:hover {
+        background-color: @default-color-light1;
+    }
+
+    &.focus {
+        background-color: @primary-color-light3;
+    }
+
+    &.focus:hover {
+        background-color: @primary-color-light2;
+    }
+
+    &:active,
+    &.focus:active {
+        background-color: @default-color-dark1;
+        color: #000;
+    }
+}

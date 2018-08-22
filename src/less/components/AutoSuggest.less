@@ -1,0 +1,40 @@
+//
+// Auto Suggest
+// --------------------------------------------------
+
+
+.f-suggestions {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	margin: 2px 0 6px 0;
+	padding: @menu-padding-y 0;
+	background-color: #fff;
+	box-shadow: @flyout-shadow;
+	z-index: @flyout-z-index;
+}
+
+.f-suggest-item {
+	display: block;
+	height: @input-height;
+	line-height: @input-height;
+	padding-left: 0.85714286rem;
+	text-align: left;
+	color: @text-color-default;
+	font-weight: 400;
+	background-color: transparent;
+	cursor: pointer;
+
+	&:hover {
+	    background-color: @default-color-light1;
+	}
+
+	&.focus {
+		background-color: @primary-color-light3;
+	}
+
+	&:active {
+		background-color: @default-color;
+	}
+}

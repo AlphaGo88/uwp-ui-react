@@ -1,0 +1,19 @@
+//
+// Flyout
+// --------------------------------------------------
+
+
+.f-Flyout {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: @flyout-shadow;
+    transition: transform .2s;
+    z-index: @flyout-z-index;
+    overflow-y: auto;
+    outline: 0;
+    transform: translateY(-10px);
+
+    &.open {
+    	transform: translateY(0px);
+    }
+}

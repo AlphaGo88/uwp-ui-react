@@ -1,0 +1,50 @@
+//
+// Text Area
+// --------------------------------------------------
+
+
+.f-TextArea {
+	padding: @textarea-padding;
+	line-height: @line-height-default;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: inherit;
+    color: @text-color-default;
+    background-color: #fff;
+    border: 0.07142857rem solid @input-border-color;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+
+    &:hover {
+        border-color: @input-hover-border-color;
+    }
+    
+    &:focus {
+        background-color: #fff;
+        border-color: @primary-color;
+    }
+
+    &[readonly] {
+        cursor: default;
+    }
+
+    &.error {
+        border-color: @color-error !important;
+    }
+
+    &[disabled],
+    &:disabled {
+        background-color: @default-color !important;
+        border-color: @default-color !important;
+        color: @text-color-disabled !important;
+        cursor: @cursor-disabled;
+        pointer-events: none;
+    }
+}
+
+.f-Input-field > .f-TextArea {
+    display: block;
+    width: 100%;
+}

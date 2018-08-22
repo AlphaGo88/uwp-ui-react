@@ -1,0 +1,80 @@
+//
+// Utility
+// --------------------------------------------------
+
+
+.truncate() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.f-hidden {
+    display: none !important;
+}
+
+.f-focus-hidden {
+    outline: 0 !important;
+}
+
+.f-scrollbar-hidden {
+    overflow: hidden;
+}
+
+
+// Motions
+.f-motion-up {
+    animation: f-motion-up;
+}
+
+.f-motion-down {
+    animation: f-motion-down;
+}
+
+.f-motion-left {
+    animation: f-motion-left;
+}
+
+.f-motion-right {
+    animation: f-motion-right;
+}
+
+@keyframes f-motion-up {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes f-motion-down {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes f-motion-left {
+    from {
+        transform: translateX(10px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes f-motion-right {
+    from {
+        transform: translateX(-10px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}

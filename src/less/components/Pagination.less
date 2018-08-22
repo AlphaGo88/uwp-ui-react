@@ -1,0 +1,110 @@
+//
+// Pagination
+// --------------------------------------------------
+
+
+.f-Pagination {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+
+    &.left {
+        justify-content: flex-start;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+    
+    &.right {
+        justify-content: flex-end;
+    }
+
+    .f-Pagination-more {
+        height: @pagination-item-height - 0.14285714rem;
+        margin: 0 @pagination-item-spacing / 2;
+        padding: 0 0.28571429rem;
+        font-size: 1.14285714rem;
+        letter-spacing: 0.07142857rem;
+        cursor: pointer;
+
+        &:hover {
+            color: @primary-color;
+        }
+    }
+}
+
+.f-Pagination-item {
+    min-width: @pagination-item-min-width;
+    height: @pagination-item-height;
+    line-height: @pagination-item-height;
+    padding: 0 @pagination-item-padding-x;
+    margin: @pagination-item-spacing / 2;
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: @text-color-default;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        color: @primary-color;
+    }
+
+    &.active {
+        background-color: @primary-color;
+        color: #fff;
+    }
+}
+
+.f-Pagination-prev,
+.f-Pagination-next {
+    display: inline-block;
+    margin-top: 0.14285714rem;
+    color: @text-color-light1;
+    cursor: pointer;
+
+    &:hover {
+        color: @primary-color;
+    }
+
+    &.disabled {
+        color: #ccc;
+        cursor: default;
+    }
+}
+
+.f-Pagination-prev {
+    margin-right: @pagination-item-spacing;
+}
+
+.f-Pagination-next {
+    margin-left: @pagination-item-spacing;
+}
+
+.f-Pagination-sizer {
+    width: 4.25rem;
+    margin-left: 1.5rem;
+
+    .f-Select-trigger {
+        height: @pagination-input-height;
+    }
+}
+
+.f-Pagination-jump {
+    margin-left: 1.5rem;
+}
+
+.f-Pagination-jump-input {
+    width: 3.28571429rem;
+    margin: 0 0.28571429rem;
+    padding-left: 0.42857143rem;
+    padding-right: 0.42857143rem;
+}
+
+.f-Pagination-jump-btn {
+    cursor: pointer;
+
+    &:hover {
+        color: @primary-color;
+    }
+}
