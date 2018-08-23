@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { FileInput } from '../../src/js/fui';
+import { FileInput } from '../../src/js/uwp-ui-react';
 
 export default class FileInputDemo extends React.Component {
 
@@ -32,7 +32,7 @@ export default class FileInputDemo extends React.Component {
                 </section>
                 <Code>
 {`import React from 'react';
-import { FileInput } from 'fui';
+import { FileInput } from 'uwp-ui-react';
 
 export default class FileInputDemo extends React.Component {
 

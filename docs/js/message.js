@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { HyperLink, Message } from '../../src/js/fui';
+import { HyperLink, Message } from '../../src/js/uwp-ui-react';
 
 export default class MessageDemo extends React.Component {
 
@@ -41,7 +41,7 @@ export default class MessageDemo extends React.Component {
                 <section><HyperLink onClick={this.showMsg6}>Error message</HyperLink></section>
                 <Code>
 {`import React from 'react';
-import { HyperLink, Message } from 'fui';
+import { HyperLink, Message } from 'uwp-ui-react';
 
 export default class MessageDemo extends React.Component {
 

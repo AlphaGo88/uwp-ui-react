@@ -1,5 +1,5 @@
 import React from 'react';
-import { HyperLink } from '../../src/js/fui';
+import { HyperLink } from '../../src/js/uwp-ui-react';
 
 export default class Home extends React.Component {
 

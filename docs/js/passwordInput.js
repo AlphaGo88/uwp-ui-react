@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { PasswordInput } from '../../src/js/fui';
+import { PasswordInput } from '../../src/js/uwp-ui-react';
 
 export default class PasswordInputDemo extends React.Component {
 
@@ -12,7 +12,7 @@ export default class PasswordInputDemo extends React.Component {
                 <section>
                     <h4>Usage</h4>
                     <Code disableToggle>
-{`import { PasswordInput } from 'fui';`}
+{`import { PasswordInput } from 'uwp-ui-react';`}
                     </Code>
                 </section>
                 <section>

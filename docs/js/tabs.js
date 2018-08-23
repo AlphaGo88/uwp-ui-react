@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { Tabs, TabItem, Icon } from '../../src/js/fui';
+import { Tabs, TabItem, Icon } from '../../src/js/uwp-ui-react';
 
 export default class TabsDemo extends React.Component {
 
@@ -112,7 +112,7 @@ export default class TabsDemo extends React.Component {
                 </section>
                 <Code>
 {`import React from 'react';
-import { Tabs, TabItem, Icon } from 'fui';
+import { Tabs, TabItem, Icon } from 'uwp-ui-react';
 
 export default class TabsDemo extends React.Component {
 

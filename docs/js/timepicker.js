@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { TimePicker } from '../../src/js/fui';
+import { TimePicker } from '../../src/js/uwp-ui-react';
 
 export default class TimePickerDemo extends React.Component {
 
@@ -27,7 +27,7 @@ export default class TimePickerDemo extends React.Component {
                 <section>
                     <h4>Usage</h4>
                     <Code disableToggle>
-{`import { TimePicker } from 'fui';`}
+{`import { TimePicker } from 'uwp-ui-react';`}
                     </Code>
                 </section>
                 <section>

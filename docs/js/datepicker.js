@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { DatePicker } from '../../src/js/fui';
+import { DatePicker } from '../../src/js/uwp-ui-react';
 
 export default class DatePickerDemo extends React.Component {
 
@@ -63,7 +63,7 @@ export default class DatePickerDemo extends React.Component {
                 </section>
                 <Code>
 {`import React from 'react';
-import { DatePicker } from 'fui';
+import { DatePicker } from 'uwp-ui-react';
 
 export default class DatePickerDemo extends React.Component {
 

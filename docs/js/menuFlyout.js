@@ -7,7 +7,7 @@ import {
     MenuItem,
     MenuItemHeader,
     Seperator 
-} from '../../src/js/fui';
+} from '../../src/js/uwp-ui-react';
 
 export default class MenuFlyoutDemo extends React.Component {
 
@@ -131,7 +131,7 @@ import {
     MenuItem,
     MenuItemHeader,
     Seperator 
-} from 'fui';
+} from 'uwp-ui-react';
 
 export default class MenuFlyoutDemo extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { TextInput } from '../../src/js/fui';
+import { TextInput } from '../../src/js/uwp-ui-react';
 
 export default class TextInputDemo extends React.Component {
 
@@ -12,7 +12,7 @@ export default class TextInputDemo extends React.Component {
                 <section>
                     <h4>Usage</h4>
                     <Code disableToggle>
-{`import { TextInput } from 'fui';`}
+{`import { TextInput } from 'uwp-ui-react';`}
                     </Code>
                 </section>
                 <h4>Default Text Input</h4>

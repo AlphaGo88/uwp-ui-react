@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { Checkbox, CheckboxGroup } from '../../src/js/fui';
+import { Checkbox, CheckboxGroup } from '../../src/js/uwp-ui-react';
 
 export default class CheckboxDemo extends React.Component {
 
@@ -100,7 +100,7 @@ export default class CheckboxDemo extends React.Component {
                 </section>
                     <Code>
 {`import React from 'react';
-import { Checkbox, CheckboxGroup } from 'fui';
+import { Checkbox, CheckboxGroup } from 'uwp-ui-react';
 
 export default class CheckboxDemo extends React.Component {
 

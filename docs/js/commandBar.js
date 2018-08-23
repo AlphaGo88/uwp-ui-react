@@ -7,7 +7,7 @@ import {
     Seperator, 
     MenuFlyout,
     MenuItem
-} from '../../src/js/fui';
+} from '../../src/js/uwp-ui-react';
 
 export default class CommandBarDemo extends React.Component {
 
@@ -87,7 +87,7 @@ import {
     Seperator, 
     MenuFlyout,
     MenuItem
-} from 'fui';
+} from 'uwp-ui-react';
 
 export default class CommandBarDemo extends React.Component {
 

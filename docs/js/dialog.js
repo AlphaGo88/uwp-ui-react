@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { HyperLink, Dialog } from '../../src/js/fui';
+import { HyperLink, Dialog } from '../../src/js/uwp-ui-react';
 
 export default class DialogDemo extends React.Component {
 
@@ -104,7 +104,7 @@ export default class DialogDemo extends React.Component {
                 </Dialog>
                 <Code>
 {`import React from 'react';
-import { HyperLink, Dialog } from 'fui';
+import { HyperLink, Dialog } from 'uwp-ui-react';
 
 export default class DialogDemo extends React.Component {
 

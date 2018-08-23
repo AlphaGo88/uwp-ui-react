@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, NavLink, Redirect } from 'react-router-dom';
-import { Overlay, Icon } from '../src/js/fui';
+import { Overlay, Icon } from '../src/js/uwp-ui-react';
 
 import Home from './js/home';
 import IconDoc from './js/iconDoc';
@@ -28,8 +28,6 @@ import TextAreaDemo from './js/textarea';
 import TextInputDemo from './js/textInput';
 import TimePickerDemo from './js/timePicker';
 import ToggleDemo from './js/toggle';
-
-import '../src/less/fui.less';
 
 class App extends React.Component {
 
@@ -107,8 +105,7 @@ class App extends React.Component {
 		            	<span className="title">UWP-UI-REACT</span>
 		            </div>
 	    			<div className="main">
-	    				<Redirect from="/" to="/home" />
-	    				<Route path="/home" component={Home} />
+	    				<Route exact path="/" component={Home} />
 	    				<Route path="/install" component={Install} />
 	    				<Route path="/icon" component={IconDoc} />
 	    				<Route path="/button" component={ButtonDemo} />

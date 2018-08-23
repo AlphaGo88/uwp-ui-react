@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { ProgressRing, ProgressBar } from '../../src/js/fui';
+import { ProgressRing, ProgressBar } from '../../src/js/uwp-ui-react';
 
 export default class ProgressDemo extends React.Component {
 
@@ -11,7 +11,7 @@ export default class ProgressDemo extends React.Component {
                 <section>
                     <h4>Usage</h4>
                     <Code disableToggle>
-{`import { ProgressRing, ProgressBar } from 'fui';`}
+{`import { ProgressRing, ProgressBar } from 'uwp-ui-react';`}
                     </Code>
                 </section>
                 <section>

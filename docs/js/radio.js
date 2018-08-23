@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { RadioGroup, Radio } from '../../src/js/fui';
+import { RadioGroup, Radio } from '../../src/js/uwp-ui-react';
 
 export default class RadioDemo extends React.Component {
 
@@ -54,7 +54,7 @@ export default class RadioDemo extends React.Component {
                 </section>
                 <Code>
 {`import React from 'react';
-import { RadioGroup, Radio } from 'fui';
+import { RadioGroup, Radio } from 'uwp-ui-react';
 
 export default class RadioDemo extends React.Component {
 

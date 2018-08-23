@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { Search } from '../../src/js/fui';
+import { Search } from '../../src/js/uwp-ui-react';
 
 const suggestions = [ 
     'Afghanistan',
@@ -113,7 +113,7 @@ export default class SearchDemo extends React.Component {
                 </section>
                 <Code>
 {`import React from 'react';
-import { Search } from 'fui';
+import { Search } from 'uwp-ui-react';
 
 const suggestions = [ 
     'Afghanistan',

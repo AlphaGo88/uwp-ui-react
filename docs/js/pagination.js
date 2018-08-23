@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { Pagination } from '../../src/js/fui';
+import { Pagination } from '../../src/js/uwp-ui-react';
 
 export default class PaginationDemo extends React.Component {
 
@@ -55,7 +55,7 @@ export default class PaginationDemo extends React.Component {
                 </section>
                 <Code>
 {`import React from 'react';
-import { Pagination } from 'fui';
+import { Pagination } from 'uwp-ui-react';
 
 export default class PaginationDemo extends React.Component {
 

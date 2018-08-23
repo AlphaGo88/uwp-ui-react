@@ -3,8 +3,9 @@
   "author": "zhao xin<83268606@qq.com>",
   "description": "UWP style web ui components",
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --config webpack.config.js --host 0.0.0.0 --mode development",
-    "docs": "webpack --config webpack.config.js --mode production"
+    "dev": "webpack-dev-server --hot --inline --config webpack.config.dev.js --host 0.0.0.0 --mode development",
+    "docs": "webpack --config webpack.config.dev.js --mode production",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",

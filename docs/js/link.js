@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { HyperLink } from '../../src/js/fui';
+import { HyperLink } from '../../src/js/uwp-ui-react';
 
 export default class LinkDemo extends React.Component {
 

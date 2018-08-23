@@ -1,5 +1,5 @@
 import React from 'react';
-import { HyperLink, Icon } from '../../src/js/fui';
+import { HyperLink, Icon } from '../../src/js/uwp-ui-react';
 
 export default class IconDoc extends React.Component {
 

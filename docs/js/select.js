@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../util/code';
-import { Select, SelectItem, SelectItemHeader, Seperator } from '../../src/js/fui';
+import { Select, SelectItem, SelectItemHeader, Seperator } from '../../src/js/uwp-ui-react';
 
 const emps = [
     { value: '', text: '--'}, 
@@ -96,7 +96,7 @@ export default class SelectDemo extends React.Component {
                 </section>
                 <Code>
 {`import React from 'react';
-import { Select, SelectItem, SelectItemHeader, Seperator } from 'fui';
+import { Select, SelectItem, SelectItemHeader, Seperator } from 'uwp-ui-react';
 
 const emps = [
     { value: '', text: '--'}, 

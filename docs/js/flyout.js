@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Code from '../util/code';
-import { Button, HyperLink, Flyout } from '../../src/js/fui';
+import { Button, HyperLink, Flyout } from '../../src/js/uwp-ui-react';
 
 export default class FlyoutDemo extends React.Component {
 
@@ -59,7 +59,7 @@ export default class FlyoutDemo extends React.Component {
                 <Code>
 {`import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, HyperLink, Flyout } from 'fui';
+import { Button, HyperLink, Flyout } from 'uwp-ui-react';
 
 export default class FlyoutDemo extends React.Component {
 
