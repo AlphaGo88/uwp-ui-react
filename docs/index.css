@@ -1,139 +1,139 @@
 body {
-	background-color: #fafafa;
+  background-color: #fafafa;
 }
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	color: #fff;
-	font-size: 20px;
-	background-color: #0383e9;
-	z-index: 1;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #0383e9;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
 
 .sidebar {
-	padding: 10px 0;
+  padding: 10px 0;
 }
 
 .sidebar h5 {
-	padding: 5px 0 5px 16px;
-	margin-top: 5px;
-	font-size: 14px;
+  padding: 5px 0 5px 16px;
+  margin-top: 5px;
+  font-size: 14px;
 }
 
 .sidebar a {
-	display: block;
-	padding: 5px 0 5px 30px;
-	color: #333;
-	text-decoration: none;
+  display: block;
+  padding: 5px 0 5px 30px;
+  color: #333;
+  text-decoration: none;
 }
 
 .sidebar a:hover {
-	color: #0078D7;
-	text-decoration: underline;
+  color: #0078D7;
+  text-decoration: underline;
 }
 
 .sidebar a.active {
-	background-color: #ddd;
-	color: #333;
+  background-color: #ddd;
+  color: #333;
 }
 
 .toggle-btn {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 .title {
-	margin-left: 20px;
-	font-weight: 600;
+  margin-left: 20px;
+  font-weight: 600;
 }
 
 .main {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 @media screen and (min-width: 801px) {
-	.header {
-		padding-left: 200px;
-	}
-	.main {
-		margin-left: 200px;
-		padding: 20px 100px;
-	}
+  .header {
+    padding-left: 200px;
+  }
+  .main {
+    margin-left: 200px;
+    padding: 20px 100px;
+  }
 
-	.toggle-btn {
-		display: none !important;
-	}
+  .toggle-btn {
+    display: none !important;
+  }
 
-	.sidebar {
-		box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4) !important;
-		transform: translateX(0px) !important;
-	}
+  .sidebar {
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4) !important;
+    transform: translateX(0px) !important;
+  }
 }
 
 @media screen and (max-width: 800px) {
-	.main {
-		padding: 20px 65px;
-	}
+  .main {
+    padding: 20px 65px;
+  }
 }
 
 @media screen and (max-width: 640px) {
-	.main {
-		padding: 20px 25px;
-	}
+  .main {
+    padding: 20px 25px;
+  }
 }
 
 h2 {
-	margin-bottom: 30px;
-	font-size: 26px;
-	color: #777;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #777;
 }
 
 h3 {
-	font-size: 20px;
-	margin: 20px 0;
-	color: #777;
+  font-size: 20px;
+  margin: 20px 0;
+  color: #777;
 }
 
 h4 {
-	margin-bottom: 10px;
-	font-size: 16px;
-	color: #555;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
 }
 
 section {
-	position: relative;
-	margin-bottom: 30px;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .code-header {
-	margin: 0 0 -5px 0;
-	text-align: right;
+  margin: 0 0 -5px 0;
+  text-align: right;
 }
 
 .code-toggle {
-	display: inline-block;
-	padding: 4px 6px;
-	color: #333;
-	border-radius: 3px;
-	cursor: pointer;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #333;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .code-toggle:hover {
-	color: #0078D7;
+  color: #0078D7;
 }
 
 .code-toggle i {
-	margin-right: 5px;
+  margin-right: 5px;
 }
 
 .grid-cell-demo {
-	padding: 10px 0;
-	text-align: center;
-	border: 1px solid #ccc;
-	background-color: #eee;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #eee;
 }

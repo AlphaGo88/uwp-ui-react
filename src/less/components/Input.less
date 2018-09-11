@@ -4,152 +4,150 @@
 
 
 .f-Input-field {
-    display: inline-block;
-    position: relative;
-    width: @input-width-default;
+  display: inline-block;
+  position: relative;
+  width: @input-width-default;
 
-    &.fullWidth {
-        display: block;
-        width: 100%;
-    }
+  &.fullWidth {
+    display: block;
+    width: 100%;
+  }
 }
 
 .f-Input-header {
-    display: block;
-    margin-bottom: @input-header-margin-bottom;
+  display: block;
+  margin-bottom: @input-header-margin-bottom;
 
-    &.disabled {
-        color: @text-color-disabled;
-    }
+  &.disabled {
+    color: @text-color-disabled;
+  }
 }
 
 .f-Input-asterisk {
-    margin-left: 0.28571429rem;
-    color: @color-error;
+  margin-left: 0.28571429rem;
+  color: @color-error;
 }
 
 .f-Input-wrapper {
-    display: flex;
-    align-items: center;
-	position: relative;
-    height: @input-height;
-    line-height: 1.28571429rem;
-    font-size: 1rem;
-    font-weight: 400;
-    color: @text-color-default;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: @input-height;
+  line-height: 1.28571429rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: @text-color-default;
+  background-color: transparent;
+  border: 0.07142857rem solid @input-border-color;
+  outline: 0;
+
+  &:hover {
+    border-color: @input-hover-border-color;
+  }
+  
+  &.translucent {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  &.translucent:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  &:focus,
+  &.focus,
+  &.translucent.focus {
+    background-color: #fff;
+    border-color: @primary-color;
+  }
+  
+  &.borderless {
+    border-width: 0;
+  }
+  
+  &.error {
+    border-color: @color-error;
+  }
+  
+  &.disabled {
+    background-color: @default-color  !important;
+    border-color: @default-color  !important;
+    color: @text-color-disabled  !important;
+    cursor: @cursor-disabled;
+    pointer-events: none;
+  }
+  
+  input {
+    flex: 1 1 auto;
+    width: 1px;
+    height: 100%;
+    padding: 0 @input-padding-x;
+    text-align: left;
+    font: inherit;
+    color: inherit;
     background-color: transparent;
-    border: 0.07142857rem solid @input-border-color;
+    border: 0;
     outline: 0;
-
-    &:hover {
-        border-color: @input-hover-border-color;
+    box-shadow: none;
+    -webkit-appearance: none;
+    
+    &[readonly] {
+      cursor: default;
     }
-
-    &.translucent {
-        background-color: rgba(255, 255, 255, 0.7);
+    
+    &[disabled],
+    &:disabled {
+      color: @text-color-disabled  !important; // Overwrite default disabled style on mobile devices
+      -webkit-text-fill-color: @text-color-disabled;
+      opacity: 1;
     }
+  }
 
-    &.translucent:hover {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    &:focus,
-    &.focus,
-    &.translucent.focus {
-        background-color: #fff;
-        border-color: @primary-color;
-    }
-
-    &.borderless {
-        border-width: 0;
-    }
-
-    &.error {
-        border-color: @color-error;
-    }
-
-    &.disabled {
-        background-color: @default-color !important;
-        border-color: @default-color !important;
-        color: @text-color-disabled !important;
-        cursor: @cursor-disabled;
-        pointer-events: none;
-    }
-
-    input {
-        flex: 1 1 auto;
-        width: 1px;
-        height: 100%;
-        padding: 0 @input-padding-x;
-        text-align: left;
-        font: inherit;
-        color: inherit;
-        background-color: transparent;
-        border: 0;
-        outline: 0;
-        box-shadow: none;
-        -webkit-appearance: none;
-
-        &[readonly] {
-            cursor: default;
-        }
-
-        &[disabled],
-        &:disabled {
-            color: @text-color-disabled !important;
-
-            // Overwrite default disabled style on mobile devices
-            -webkit-text-fill-color: @text-color-disabled;
-            opacity: 1;
-        }
-    }
-
-    .f-Icon {
-        width: @input-icon-width;
-        text-align: center;
-        font-size: inherit;
-        color: inherit;
-    }
+  .f-Icon {
+    width: @input-icon-width;
+    text-align: center;
+    font-size: inherit;
+    color: inherit;
+  }
 }
 
 .f-Input-prefix {
-    margin-left: @input-padding-x;
+  margin-left: @input-padding-x;
 }
 
 .f-Input-suffix {
-    margin-right: @input-padding-x;
+  margin-right: @input-padding-x;
 }
 
 .f-Input-wrapper.underlined {
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
 
-    &:focus,
-    &.focus {
-        background-color: transparent;
+  &:focus,
+  &.focus {
+    background-color: transparent;
+  }
+  
+  &.disabled {
+    background-color: transparent !important;
+  }
+  
+  input {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .f-Input-prefix {
+    margin-left: 0;
+    margin-right: @input-padding-x;
+  }
+  
+  .f-Input-suffix {
+    margin-left: @input-padding-x;
+    margin-right: 0;
+    
+    &:last-child {
+      margin-right: @input-padding-x;
     }
-
-    &.disabled {
-        background-color: transparent !important;
-    }
-
-    input {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .f-Input-prefix {
-        margin-left: 0; 
-        margin-right: @input-padding-x;       
-    }
-
-    .f-Input-suffix {
-        margin-left: @input-padding-x;
-        margin-right: 0;
-
-        &:last-child {
-            margin-right: @input-padding-x;
-        }
-    }
+  }
 }

@@ -4,77 +4,77 @@
 
 
 .f-Dialog-mask {
-    position: fixed;
-    top: 0;
-    left: -10000px;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    will-change: opacity;
-    transition: opacity .3s;
-    z-index: @overlay-z-index;
-    background-color: @overlay-mask-bg;
-    overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: -10000px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity .3s;
+  z-index: @overlay-z-index;
+  background-color: @overlay-mask-bg;
+  overflow-y: auto;
 
-    &.open {
-        left: 0;
-        opacity: 1;
-    }
+  &.open {
+    left: 0;
+    opacity: 1;
+  }
 }
 
 .f-Dialog {
-    position: relative;
-    margin: 0 auto;
-    width: @dialog-width-default;
-    min-width: @dialog-min-width;
-    padding: @dialog-padding;
-    color: @text-color-default;
-    background-color: #fff;
-    transform: translateY(15px);
-    transition: transform 300ms;
-    box-shadow: @dialog-shadow;
+  position: relative;
+  margin: 0 auto;
+  width: @dialog-width-default;
+  min-width: @dialog-min-width;
+  padding: @dialog-padding;
+  color: @text-color-default;
+  background-color: #fff;
+  transform: translateY(15px);
+  transition: transform 300ms;
+  box-shadow: @dialog-shadow;
 
-    &:focus {
-        outline: @primary-color solid 0.07142857rem;
-    }
-
-    &.open {
-        transform: translateY(0px);
-    }
+  &:focus {
+    outline: @primary-color solid 0.07142857rem;
+  }
+  
+  &.open {
+    transform: translateY(0px);
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .f-Dialog {
-        width: 70%;
-    }
+  .f-Dialog {
+    width: 70%;
+  }
 }
 
 .f-Dialog-title {
-    padding: @dialog-title-padding;
-    font-size: 1.14285714rem;
+  padding: @dialog-title-padding;
+  font-size: 1.14285714rem;
 }
 
 .f-Dialog-content {
-    padding: @dialog-content-padding;
-    font-size: 1rem;
+  padding: @dialog-content-padding;
+  font-size: 1rem;
 }
 
 .f-Dialog-foot {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: @dialog-foot-padding;
-    font-size: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: @dialog-foot-padding;
+  font-size: 1rem;
 
-    button {
-        flex: 1 1 auto;
-        min-width: 4.28571429rem;
-        max-width: 50%;
-        padding: 0;
-        margin-left: @dialog-btn-spacing;
-
-        &:last-child {
-            margin-left: 0;
-        }
+  button {
+    flex: 1 1 auto;
+    min-width: 4.28571429rem;
+    max-width: 50%;
+    padding: 0;
+    margin-left: @dialog-btn-spacing;
+    
+    &:last-child {
+      margin-left: 0;
     }
+  }
 }

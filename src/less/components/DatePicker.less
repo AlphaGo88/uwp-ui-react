@@ -4,175 +4,175 @@
 
 
 .f-DP-trigger {
-    padding: 0 @input-padding-x;
-    user-select: none;
-    cursor: default;
+  padding: 0 @input-padding-x;
+  user-select: none;
+  cursor: default;
 
-    &.underlined {
-        padding-left: 0;
-    }
+  &.underlined {
+    padding-left: 0;
+  }
 }
 
 .f-DP-value,
 .f-DP-placeholder {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .f-DP-placeholder {
-    color: @text-color-light1;
+  color: @text-color-light1;
 }
 
 .f-DP-clear {
-    display: none;
-    margin-right: @input-padding-x;
-    color: @text-color-light3 !important;
-    cursor: pointer;
+  display: none;
+  margin-right: @input-padding-x;
+  color: @text-color-light3 !important;
+  cursor: pointer;
 
-    &:hover {
-        color: @text-color-light1 !important;
-    }
+  &:hover {
+    color: @text-color-light1 !important;
+  }
 }
 
-.f-DP-trigger:hover > .f-DP-clear {
-    display: block;
+.f-DP-trigger:hover>.f-DP-clear {
+  display: block;
 }
 
 .f-DP-panel {
-    height: auto !important;
-    overflow-y: visible !important;
+  height: auto !important;
+  overflow-y: visible !important;
 }
 
 .f-DP-head {
-    position: relative;
-    height: 2.42857143rem;
-    line-height: 2.42857143rem;
-    padding: 0 0.71428571rem;
+  position: relative;
+  height: 2.42857143rem;
+  line-height: 2.42857143rem;
+  padding: 0 0.71428571rem;
 }
 
 .f-DP-head-year,
 .f-DP-head-month,
 .f-DP-head-dacade {
-    margin-right: 0.28571429rem;
-    color: @text-color-default;
-    font-size: 1rem;
-    font-weight: 500;
+  margin-right: 0.28571429rem;
+  color: @text-color-default;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .f-DP-head-year,
 .f-DP-head-month {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover {
-        color: @primary-color;
-    }
+  &:hover {
+    color: @primary-color;
+  }
 }
 
 .f-DP-prev-btn,
 .f-DP-next-btn {
-    display: inline-block;
-    position: absolute;
-    width: 0.71428571rem;
-    height: 0.71428571rem;
-    top: 50%;
-    border-right: 0.07142857rem solid @text-color-default;
-    border-bottom: 0.07142857rem solid @text-color-default;
-    cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  width: 0.71428571rem;
+  height: 0.71428571rem;
+  top: 50%;
+  border-right: 0.07142857rem solid @text-color-default;
+  border-bottom: 0.07142857rem solid @text-color-default;
+  cursor: pointer;
 
-    &:hover {
-        border-color: @primary-color;
-    }
+  &:hover {
+    border-color: @primary-color;
+  }
 }
 
 .f-DP-prev-btn {
-    right: 3.28571429rem;
-    margin-top: -0.14285714rem;
-    transform: rotate(-135deg);
+  right: 3.28571429rem;
+  margin-top: -0.14285714rem;
+  transform: rotate(-135deg);
 }
 
 .f-DP-next-btn {
-    right: 1.07142857rem;
-    margin-top: -0.57142857rem;
-    transform: rotate(45deg);
+  right: 1.07142857rem;
+  margin-top: -0.57142857rem;
+  transform: rotate(45deg);
 }
 
 .f-DP-row {
-    display: flex;
+  display: flex;
 }
 
 .f-DP-dow {
-    width: 2.35714286rem;
-    height: 2.0rem;
-    line-height: 2.0rem;
-    text-align: center;
-    color: @text-color-default;
-    font-size: 0.85714286rem;
-    font-weight: 500;
+  width: 2.35714286rem;
+  height: 2.0rem;
+  line-height: 2.0rem;
+  text-align: center;
+  color: @text-color-default;
+  font-size: 0.85714286rem;
+  font-weight: 500;
 
-    &:first-child {
-        width: 2.28571429rem;
-    }
+  &:first-child {
+    width: 2.28571429rem;
+  }
 }
 
 .f-DP-cell {
-    border-top: 0.07142857rem solid #e2e2e2;
-    border-left: 0.07142857rem solid #e2e2e2;
+  border-top: 0.07142857rem solid #e2e2e2;
+  border-left: 0.07142857rem solid #e2e2e2;
 
-    &:first-child {
-        border-left: 0;
-    }
-
-    // out of scope
-    &.oos {
-        background-color: #f5f5f5;
-    }
+  &:first-child {
+    border-left: 0;
+  }
+  
+  // out of scope
+  &.oos {
+    background-color: #f5f5f5;
+  }
 }
 
 .f-DP-date-item,
 .f-DP-month-item,
 .f-DP-year-item {
-    display: block;
-    text-align: center;
-    color: @text-color-default;
-    font-size: 1rem;
-    font-weight: 400;
-    border: 1px solid transparent;
-    cursor: pointer;
+  display: block;
+  text-align: center;
+  color: @text-color-default;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid transparent;
+  cursor: pointer;
 
-    &:hover {
-        border-color: @text-color-light2;
-    }
-
-    &.focus {
-        border-color: #000;
-    }
-
-    &:active {
-        border-color: @text-color-light1;
-    }
-
-    &.selected {
-        background-color: @primary-color;
-        border-color: @primary-color;
-        color: #fff;
-    }
-
-    &.disabled {
-        background-color: transparent;
-        color: @text-color-disabled;
-        border-color: transparent; 
-        cursor: @cursor-disabled;
-    }
+  &:hover {
+    border-color: @text-color-light2;
+  }
+  
+  &.focus {
+    border-color: #000;
+  }
+  
+  &:active {
+    border-color: @text-color-light1;
+  }
+  
+  &.selected {
+    background-color: @primary-color;
+    border-color: @primary-color;
+    color: #fff;
+  }
+  
+  &.disabled {
+    background-color: transparent;
+    color: @text-color-disabled;
+    border-color: transparent;
+    cursor: @cursor-disabled;
+  }
 }
 
 .f-DP-date-item {
-    width: 2.28571429rem;
-    height: 2.28571429rem;
-    line-height: 2.14285714rem;
+  width: 2.28571429rem;
+  height: 2.28571429rem;
+  line-height: 2.14285714rem;
 }
 
 .f-DP-month-item,
 .f-DP-year-item {
-    width: 4.07142857rem;
-    height: 3.85714286rem;
-    line-height: 3.85714286rem;
+  width: 4.07142857rem;
+  height: 3.85714286rem;
+  line-height: 3.85714286rem;
 }

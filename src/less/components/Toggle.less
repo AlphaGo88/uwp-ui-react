@@ -4,89 +4,89 @@
 
 
 .f-Toggle-field {
-	width: auto;
+  width: auto;
 }
 
 .f-Toggle {
-	display: block;
-	position: relative;
-	height: @switch-height;
-	line-height: @switch-height;
+  display: block;
+  position: relative;
+  height: @switch-height;
+  line-height: @switch-height;
 
-	> [type="checkbox"] {
-		position: absolute;
-		opacity: 0;
-		width: 0;
-		height: 0;
-	}
+  > [type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 }
 
 .f-Toggle-label {
-	display: block;
-	height: 100%;
-	padding-left: @switch-label-left + 2.85714286rem;
-	font-size: 1rem;
-	user-select: none;
-	outline-offset: @switch-outline-offset;
+  display: block;
+  height: 100%;
+  padding-left: @switch-label-left + 2.85714286rem;
+  font-size: 1rem;
+  user-select: none;
+  outline-offset: @switch-outline-offset;
 }
 
 [type="checkbox"]:focus + .f-Toggle-label {
-    outline: @outline-default;
+  outline: @outline-default;
 }
 
 [type="checkbox"][disabled] + .f-Toggle-label {
-    color: @text-color-disabled;
+  color: @text-color-disabled;
 }
 
 .f-Toggle-lever {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 2.85714286rem;
-	height: 100%;
-	border: 0.07142857rem solid @switch-border-color;
-	border-radius: @switch-height;
-	background-color: #fff;
-	cursor: pointer;
-	transition: background-color .1s ease;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.85714286rem;
+  height: 100%;
+  border: 0.07142857rem solid @switch-border-color;
+  border-radius: @switch-height;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color .1s ease;
 
-	&:hover {
-		border-color: #000;
-	}
+  &:hover {
+    border-color: #000;
+  }
 
-	&:after {
-		content: '';
-		display: block;
-		width: @switch-height - 0.71428571rem;
-		height: @switch-height - 0.71428571rem;
-		background-color: @text-color-default;
-		border-radius: 50%;
-		transform: translate(0.28571429rem, 0.28571429rem);
-		transition: transform .1s ease;
-	}
+  &:after {
+    content: '';
+    display: block;
+    width: @switch-height - 0.71428571rem;
+    height: @switch-height - 0.71428571rem;
+    background-color: @text-color-default;
+    border-radius: 50%;
+    transform: translate(0.28571429rem, 0.28571429rem);
+    transition: transform .1s ease;
+  }
 
-	&.on {
-		background-color: @primary-color;
-		border-color: @primary-color;
+  &.on {
+    background-color: @primary-color;
+    border-color: @primary-color;
 
-		&:hover {
-			background-color: @primary-color-light1;
-			border-color: @primary-color-light1;
-		}
+    &:hover {
+      background-color: @primary-color-light1;
+      border-color: @primary-color-light1;
+    }
 
-		&:after {
-			background-color: #fff;
-			transform: translate(1.85714286rem, 0.28571429rem);
-		}
-	}
+    &:after {
+      background-color: #fff;
+      transform: translate(1.85714286rem, 0.28571429rem);
+    }
+  }
 }
 
 [type="checkbox"][disabled] + .f-Toggle-label > .f-Toggle-lever {
-	background-color: lighten(@switch-disabled-bg, 10%);
-	border-color: lighten(@switch-disabled-bg, 10%);
-	cursor: @cursor-disabled;
+  background-color: lighten(@switch-disabled-bg, 10%);
+  border-color: lighten(@switch-disabled-bg, 10%);
+  cursor: @cursor-disabled;
 
-	&:after {
-		background-color: darken(@switch-disabled-bg, 4%);
-	}
+  &:after {
+    background-color: darken(@switch-disabled-bg, 4%);
+  }
 }

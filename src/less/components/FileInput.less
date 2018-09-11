@@ -4,45 +4,45 @@
 
 
 .f-FileInput-wrapper {
-    display: flex;
-    position: relative;
-    width: @file-input-width-default;
-
-    > .f-Input-wrapper {
-        flex: 1 1 auto;
-        padding-right: @input-padding-x + @input-icon-width;
-    }
-
-    [type="file"] {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        font-size: 0;
-        opacity: 0 !important;
-    }
+  display: flex;
+  position: relative;
+  width: @file-input-width-default;
+ 
+  >.f-Input-wrapper {
+    flex: 1 1 auto;
+    padding-right: @input-padding-x + @input-icon-width;
+  }
+  
+  [type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    opacity: 0 !important;
+  }
 }
 
 .f-FileInput-btn {
-    flex: 0 0 auto;
-    margin-left: 0.42857143rem;
+  flex: 0 0 auto;
+  margin-left: 0.42857143rem;
 }
 
 .f-FileInput-clear {
-    display: none;
-    position: absolute;
-    right: @input-padding-x;
-    top: 50%;
-    color: @text-color-light3 !important;
-    transform: translateY(-50%);
-    cursor: pointer;
-
-    &:hover {
-        color: @text-color-light1 !important;
-    }
+  display: none;
+  position: absolute;
+  right: @input-padding-x;
+  top: 50%;
+  color: @text-color-light3 !important;
+  transform: translateY(-50%);
+  cursor: pointer;
+  
+  &:hover {
+    color: @text-color-light1 !important;
+  }
 }
 
-.f-FileInput-wrapper > .f-Input-wrapper:hover .f-FileInput-clear {
-    display: block;
+.f-FileInput-wrapper>.f-Input-wrapper:hover .f-FileInput-clear {
+  display: block;
 }

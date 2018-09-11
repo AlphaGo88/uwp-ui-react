@@ -9,172 +9,176 @@ import Icon from '../Icon';
 
 export default class InputBase extends React.Component {
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            focus: false
-        };
+    this.state = {
+      focus: false
+    };
+  }
+
+  focus() {
+    this.input.focus();
+  }
+
+  blur() {
+    this.input.blur();
+  }
+
+  handleFocus = () => {
+    this.setState({
+      focus: true
+    });
+    if (this.props.onFocus) {
+      this.props.onFocus();
     }
+  }
 
-    focus() {
-        this.input.focus();
+  handleBlur = () => {
+    this.setState({
+      focus: false
+    });
+    if (this.props.onBlur) {
+      this.props.onBlur();
     }
+  }
 
-    blur() {
-        this.input.blur();
-    }
+  handleChange = (event) => {
+    this.props.onChange(this.props.name, event.target.value);
+  }
 
-    handleFocus = () => {
-        this.setState({
-            focus: true 
-        });
-        if (this.props.onFocus) {
-            this.props.onFocus();
-        }
-    }
+  render() {
+    const {
+      className,
+      fullWidth,
+      header,
+      width,
+      required,
+      type,
+      name,
+      value,
+      underlined,
+      error,
+      disabled,
+      leftIcon,
+      rightIcon,
+      prefix,
+      suffix,
+      ...other
+    } = this.props;
 
-    handleBlur = () => {
-        this.setState({
-            focus: false 
-        });
-        if (this.props.onBlur) {
-            this.props.onBlur();
-        }
-    }
+    const {
+      focus
+    } = this.state;
 
-    handleChange = (event) => {
-        this.props.onChange(this.props.name, event.target.value);
-    }
+    const leftIconProps = typeof leftIcon === 'string' ? {
+      name: leftIcon
+    } : leftIcon;
 
-    render() {
-        const { 
-            className,
-            fullWidth,
-            header,
-            width,
-            required,
-            type,
-            name,
-            value,
-            underlined,
-            error,
-            disabled,
-            leftIcon,
-            rightIcon,
-            prefix,
-            suffix,
-            ...other
-        } = this.props;
+    const rightIconProps = typeof rightIcon === 'string' ? {
+      name: rightIcon
+    } : rightIcon;
 
-        const { focus } = this.state;
-
-        const leftIconProps = typeof leftIcon === 'string' ?
-            { name: leftIcon } : leftIcon;
-
-        const rightIconProps = typeof rightIcon === 'string' ?
-            { name: rightIcon } : rightIcon;
-
-        return (
-            <InputField
-                className={className}
-                width={width}
-                fullWidth={fullWidth}
-                header={header}
-                required={required}
-                disabled={disabled}
-            >
-                <div 
-                    className={cx(
-                        'f-Input-wrapper',
-                        { 
-                            underlined,
-                            focus,
-                            error,
-                            disabled
-                        }
-                    )}
-                >
-                    {leftIcon &&
-                        <div className="f-Input-prefix">
-                            <Icon 
-                                {...leftIconProps}
-                            />
-                        </div>
-                    }
-                    {prefix &&
-                        <div className="f-Input-prefix">
-                            {prefix}
-                        </div>
-                    }
-                    <input
-                        ref={el => this.input = el}
-                        type={type}
-                        name={name}
-                        value={value}
-                        required={required}
-                        disabled={disabled}
-                        {...other}
-                        onFocus={this.handleFocus}
-                        onBlur={this.handleBlur}
-                        onChange={this.handleChange}
-                    />
-                    {suffix &&
-                        <div className="f-Input-suffix">
-                            {suffix}
-                        </div>
-                    }
-                    {rightIcon &&
-                        <div className="f-Input-suffix">
-                            <Icon 
-                                {...rightIconProps}
-                            />
-                        </div>
-                    }
-                </div>
-            </InputField>
-        );
-    }
+    return (
+      <InputField
+        className={className}
+        width={width}
+        fullWidth={fullWidth}
+        header={header}
+        required={required}
+        disabled={disabled}
+      >
+        <div 
+          className={cx(
+            'f-Input-wrapper',
+            { 
+              underlined,
+              focus,
+              error,
+              disabled
+            }
+          )}
+        >
+          {leftIcon &&
+            <div className="f-Input-prefix">
+              <Icon 
+                {...leftIconProps}
+              />
+            </div>
+          }
+          {prefix &&
+            <div className="f-Input-prefix">
+              {prefix}
+            </div>
+          }
+          <input
+            ref={el => this.input = el}
+            type={type}
+            name={name}
+            value={value}
+            required={required}
+            disabled={disabled}
+            {...other}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+            onChange={this.handleChange}
+          />
+          {suffix &&
+              <div className="f-Input-suffix">
+                  {suffix}
+              </div>
+          }
+          {rightIcon &&
+              <div className="f-Input-suffix">
+                  <Icon 
+                      {...rightIconProps}
+                  />
+              </div>
+          }
+        </div>
+      </InputField>
+    );
+  }
 }
 
 InputBase.propTypes = {
+  
+  className: PropTypes.string,
 
-    className: PropTypes.string,
+  header: PropTypes.node,
+  
+  width: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]),
+  
+  name: PropTypes.string,
+  
+  value: PropTypes.string,
 
-    header: PropTypes.node,
+  // Underlined style
+  underlined: PropTypes.bool,
 
-    width: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-    ]),
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]),
 
-    name: PropTypes.string,
+  // Show error status
+  error: PropTypes.bool,
 
-    value: PropTypes.string,
+  fullWidth: PropTypes.bool,
 
-    // Underlined style
-    underlined: PropTypes.bool,
-
-    icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.object
-    ]),
-
-    // Show error status
-    error: PropTypes.bool,
-
-    fullWidth: PropTypes.bool,
-
-    /**
-     * Called when the input's value changes
-     * 
-     * @param {string} `name` The name of the input
-     * @param {string} `value` The value of the input
-     */
-    onChange: PropTypes.func
+  /**
+   * Called when the input's value changes
+   * 
+   * @param {string} `name` The name of the input
+   * @param {string} `value` The value of the input
+   */
+  onChange: PropTypes.func
 };
 
 InputBase.defaultProps = {
-    value: '',
-    onChange: () => {}
+  value: '',
+  onChange: () => {}
 };

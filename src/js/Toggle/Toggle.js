@@ -8,119 +8,115 @@ import InputField from '../internal/InputField';
 
 export default class Toggle extends React.Component {
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            focusHidden: false
-        };
+    this.state = {
+      focusHidden: false
+    };
+  }
+
+  handleBlur = () => {
+    if (this.state.focusHidden) {
+      this.setState({
+        focusHidden: false
+      });
     }
+  }
 
-    handleBlur = () => {
-        if (this.state.focusHidden) {
-            this.setState({
-                focusHidden: false 
-            });
-        }
+  handleClick = () => {
+    if (!this.state.focusHidden) {
+      this.setState({
+        focusHidden: true
+      });
     }
+  }
 
-    handleClick = () => {
-        if (!this.state.focusHidden) {
-            this.setState({
-                focusHidden: true 
-            });
-        }
-    }
+  handleChange = (event) => {
+    this.props.onChange(this.props.name, event.target.checked);
+  }
 
-    handleChange = (event) => {
-        this.props.onChange(this.props.name, event.target.checked);
-    }
+  render() {
+    const {
+      className,
+      name,
+      header,
+      disabled,
+      isOn,
+      onText,
+      offText
+    } = this.props;
 
-    render() {
-        const { 
-            className,
-            name,
-            header,
-            disabled,
-            isOn,
-            onText,
-            offText
-        } = this.props;
+    const {
+      focusHidden
+    } = this.state;
 
-        const {
-            focusHidden
-        } = this.state;
-
-        return (
-            <InputField
-                className={cx('f-Toggle-field', className)}
-                header={header}
-                disabled={disabled}
-            >
-                <label 
-                    className="f-Toggle"
-                >
-                    <input 
-                        type="checkbox"
-                        name={name}
-                        disabled={disabled}
-                        checked={isOn}
-                        onChange={this.handleChange}
-                        onBlur={this.handleBlur}
-                    />
-                    <span 
-                        className={cx(
-                            'f-Toggle-label',
-                            { 
-                                'f-focus-hidden': focusHidden
-                            }
-                        )}
-                        onClick={this.handleClick}
-                    >
-                        <span 
-                            className={cx(
-                                'f-Toggle-lever',
-                                {
-                                    'on': isOn
-                                }
-                            )}
-                        />
-                        {isOn ? onText : offText}
-                    </span>
-                </label>
-            </InputField>
-        );
-    }
+    return (
+      <InputField
+        className={cx('f-Toggle-field', className)}
+        header={header}
+        disabled={disabled}
+      >
+        <label 
+            className="f-Toggle"
+        >
+          <input 
+            type="checkbox"
+            name={name}
+            disabled={disabled}
+            checked={isOn}
+            onChange={this.handleChange}
+            onBlur={this.handleBlur}
+          />
+          <span 
+            className={cx(
+                'f-Toggle-label',
+                {'f-focus-hidden': focusHidden}
+            )}
+            onClick={this.handleClick}
+          >
+          <span 
+            className={cx(
+              'f-Toggle-lever',
+              {'on': isOn}
+            )}
+          />
+          {isOn ? onText : offText}
+          </span>
+        </label>
+      </InputField>
+    );
+  }
 };
 
 Toggle.propTypes = {
 
-    // Overwrite or extend the styles
-    className: PropTypes.string,
+  // Overwrite or extend the styles
+  className: PropTypes.string,
 
-    header: PropTypes.node,
+  header: PropTypes.node,
 
-    name: PropTypes.string,
+  name: PropTypes.string,
 
-    disabled: PropTypes.bool,
+  disabled: PropTypes.bool,
 
-    isOn: PropTypes.bool,
+  isOn: PropTypes.bool,
 
-    onText: PropTypes.string,
+  onText: PropTypes.string,
 
-    offText: PropTypes.string,
+  offText: PropTypes.string,
 
-    /**
-     * Called when toggled.
-     * 
-     * @param {string} `name`
-     * @param {boolean} `isOn`
-     */
-    onChange: PropTypes.func,
+  /**
+   * Called when toggled.
+   * 
+   * @param {string} `name`
+   * @param {boolean} `isOn`
+   */
+  onChange: PropTypes.func,
 };
 
 Toggle.defaultProps = {
-    onText: 'On',
-    offText: 'Off',
-    onChange: () => {}
+  onText: 'On',
+  offText: 'Off',
+  onChange: () => {}
 };

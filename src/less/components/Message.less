@@ -4,87 +4,86 @@
 
 
 #f-Msg-layer {
-    display: block;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    text-align: center;
-    pointer-events: none;
-    z-index: @msg-z-index;
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  pointer-events: none;
+  z-index: @msg-z-index;
 }
 
 .f-Msg {
-    display: inline-flex;
-    justify-content: center;
-    position: relative;
-    min-width: @msg-min-width;
-    max-width: 50%;
-    margin-top: @msg-margin-top;
-    padding: @msg-padding-y @msg-padding-x;
-    border-radius: @msg-radius;
-    font-size: 1rem;
-    opacity: 1;
-    box-shadow: @msg-shadow;
-    transition: all 150ms ease-in;
-    animation: f-msg-enter 150ms ease-out;
-    cursor: pointer;
-    pointer-events: auto;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  min-width: @msg-min-width;
+  max-width: 50%;
+  margin-top: @msg-margin-top;
+  padding: @msg-padding-y @msg-padding-x;
+  border-radius: @msg-radius;
+  font-size: 1rem;
+  opacity: 1;
+  box-shadow: @msg-shadow;
+  transition: all 150ms ease-in;
+  animation: f-msg-enter 150ms ease-out;
+  cursor: pointer;
+  pointer-events: auto;
 
-    &.exit {
-        opacity: 0;
-        transform: translateY(-15px);
-    }
-
+  &.exit {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  
+  .f-Icon {
+    margin-right: @msg-icon-margin-right;
+    font-size: @msg-icon-font-size;
+  }
+  
+  &.msg {
+    background-color: #fff;
+    color: @text-color-default;
     .f-Icon {
-        margin-right: @msg-icon-margin-right;
-        font-size: @msg-icon-font-size;
+      color: @primary-color;
     }
+  }
 
-    &.msg {
-        background-color: #fff;
-        color: @text-color-default;
+  &.dark {
+    background-color: @msg-dark-bg;
+    color: #fff;
+  }
 
-        .f-Icon {
-            color: @primary-color;
-        }
-    }
-
-    &.dark {
-        background-color: @msg-dark-bg;
-        color: #fff;
-    }
-
-    &.success {
-        background-color: @color-success;
-        color: #fff;
-    }
-
-    &.info {
-        background-color: @color-info;
-        color: #fff;
-    }
-
-    &.warning {
-        background-color: @color-warning;
-        color: #fff;
-    }
-
-    &.error {
-        background-color: @color-error;
-        color: #fff;
-    }
+  &.success {
+    background-color: @color-success;
+    color: #fff;
+  }
+  
+  &.info {
+    background-color: @color-info;
+    color: #fff;
+  }
+  
+  &.warning {
+    background-color: @color-warning;
+    color: #fff;
+  }
+  
+  &.error {
+    background-color: @color-error;
+    color: #fff;
+  }
 }
 
 .f-Msg-text {
-    text-align: left;
-    line-height: 1.42857143rem;
+  text-align: left;
+  line-height: 1.42857143rem;
 }
 
 @keyframes f-msg-enter {
-    from {
-        transform: translateY(-15px);
-    }
-    to {
-        transform: translateY(0px);
-    }
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }

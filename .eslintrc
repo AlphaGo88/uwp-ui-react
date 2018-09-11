@@ -1,13 +1,12 @@
 {
-    "env": {
-        "browser": true,
-        "node": true,
-        "es6": true
-    },
-    "parser": "babel-eslint",
-    "ecmaFeatures": {
-       "jsx": true
-    },
-    "rules": {
-    }
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "rules": {}
 }

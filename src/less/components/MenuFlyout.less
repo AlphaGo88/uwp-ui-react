@@ -4,80 +4,80 @@
 
 
 .f-MenuFlyout {
-    padding: @menu-padding-y 0;
-    background-color: #fff;
-
-    .f-Seperator {
-        height: 0.07142857rem;
-        margin: 0.28571429rem 1.0rem;
-        border-bottom: 0.07142857rem solid @default-color;
-    }
+  padding: @menu-padding-y 0;
+  background-color: #fff;
+  
+  .f-Seperator {
+    height: 0.07142857rem;
+    margin: 0.28571429rem 1.0rem;
+    border-bottom: 0.07142857rem solid @default-color;
+  }
 }
 
 .f-MenuItem,
 .f-MenuItem-header {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    padding: 0.42857143rem 2.0rem 0.42857143rem 0.85714286rem;
-    line-height: 1.25;
-    text-align: left;
-    color: @text-color-default;
-    font-size: 14px;
-    font-family: inherit;
-    background-color: transparent;
-    border: 1px solid transparent;
-    user-select: none;
-    .truncate();
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0.42857143rem 2.0rem 0.42857143rem 0.85714286rem;
+  line-height: 1.25;
+  text-align: left;
+  color: @text-color-default;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid transparent;
+  user-select: none;
+  .truncate();
 
-    &.reserve {
-        padding-left: 2.85714286rem;
-    }
-
-    > .f-Icon {
-        width: 1.28571429rem;
-        margin: 0 0.85714286rem 0 -0.14285714rem;
-        line-height: 1;
-        text-align: center;
-        font-size: 1.07142857rem;
-    }
+  &.reserve {
+    padding-left: 2.85714286rem;
+  }
+  
+  >.f-Icon {
+    width: 1.28571429rem;
+    margin: 0 0.85714286rem 0 -0.14285714rem;
+    line-height: 1;
+    text-align: center;
+    font-size: 1.07142857rem;
+  }
 }
 
 .f-MenuItem-header {
-    padding-bottom: 0.14285714rem;
-    color: @primary-color;
-    font-weight: 600;
+  padding-bottom: 0.14285714rem;
+  color: @primary-color;
+  font-weight: 600;
 }
 
 .f-MenuItem {
-    font-weight: 400;
-    cursor: pointer;
-    text-decoration: none;
-    outline: 0;
-    -webkit-appearance: none;
-
-    &:hover {
-        background-color: @default-color-light1;
-    }
-
-    &:focus {
-        border-color: @primary-color;
-    }
-
-    &:active {
-        background-color: @default-color-dark1;
-        border-color: transparent;
-        color: #000;
-    }
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+  -webkit-appearance: none;
+  
+  &:hover {
+    background-color: @default-color-light1;
+  }
+  
+  &:focus {
+    border-color: @primary-color;
+  }
+  
+  &:active {
+    background-color: @default-color-dark1;
+    border-color: transparent;
+    color: #000;
+  }
 }
 
 .f-MenuItem-text {
-    display: block;
+  display: block;
 }
 
 .f-MenuItem-second-text {
-    display: block;
-    font-size: 0.85714286rem;
-    color: @text-color-light1;
+  display: block;
+  font-size: 0.85714286rem;
+  color: @text-color-light1;
 }

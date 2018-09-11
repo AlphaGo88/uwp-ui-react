@@ -4,38 +4,38 @@
 
 
 .f-Grid {
-    display: flex;
-    position: relative;
-    flex-flow: row wrap;
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
 }
 
 .f-GridCell {
-    display: block;
-    position: relative;
-    flex: 1 1 auto;
+  display: block;
+  position: relative;
+  flex: 1 1 auto;
 
-    &.fixed {
-        flex: 0 0 auto;
-    }
+  &.fixed {
+    flex: 0 0 auto;
+  }
 }
 
 // Width and offset of grid cells
 .loop-grid-cells(@prefix; @index) when (@index =< @grid-columns) {
-    .f-GridCell.@{prefix}-@{index} {
-        flex: 0 0 percentage((@index / @grid-columns));
-    }
-    .f-GridCell.@{prefix}-offset-@{index} {
-        margin-left: percentage((@index / @grid-columns));
-    }
-    .loop-grid-cells(@prefix; @index + 1);
+  .f-GridCell.@{prefix}-@{index} {
+    flex: 0 0 percentage((@index / @grid-columns));
+  }
+  .f-GridCell.@{prefix}-offset-@{index} {
+    margin-left: percentage((@index / @grid-columns));
+  }
+  .loop-grid-cells(@prefix; @index + 1);
 }
 
-.loop-grid-cells(@prefix:col; @index:1);
+.loop-grid-cells(@prefix: col; @index: 1);
 
 @media screen and (max-width: 1008px) {
-    .loop-grid-cells(@prefix:md-col; @index:1);
+  .loop-grid-cells(@prefix: md-col; @index: 1);
 }
 
 @media screen and (max-width: 640px) {
-    .loop-grid-cells(@prefix:sm-col; @index:1);
+  .loop-grid-cells(@prefix: sm-col; @index: 1);
 }

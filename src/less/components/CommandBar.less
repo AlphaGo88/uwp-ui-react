@@ -4,68 +4,68 @@
 
 
 .f-CmdBar {
-	display: flex;
-	justify-content: flex-end;
-	min-height: 2.85714286rem;
-	background-color: @default-color-light1;
-	overflow-x: hidden;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 2.85714286rem;
+  background-color: @default-color-light1;
+  overflow-x: hidden;
 
-	.f-Seperator {
-		margin: 0.85714286rem 0.71428571rem auto 0.71428571rem;
-		height: 1.14285714rem;
-		border-right: 1px solid @text-color-light2;
-	}
+  .f-Seperator {
+    margin: 0.85714286rem 0.71428571rem auto 0.71428571rem;
+    height: 1.14285714rem;
+    border-right: 1px solid @text-color-light2;
+  }
 }
 
 .f-CmdBar-content {
-	flex: 1 1 auto;
-	margin: 0.57142857rem 0 0.57142857rem 0.85714286rem;
-	height: 100%;
-	line-height: @line-height-default;
-	text-align: left;
-	font-size: 1rem;
-	color: @text-color-default;
-	.truncate();
+  flex: 1 1 auto;
+  margin: 0.57142857rem 0 0.57142857rem 0.85714286rem;
+  height: 100%;
+  line-height: @line-height-default;
+  text-align: left;
+  font-size: 1rem;
+  color: @text-color-default;
+  .truncate();
 }
 
 .f-CmdBtn {
-	position: relative;
-	flex: 0 1 auto;
-	min-width: 3.57142857rem;
-	padding: 0.64285714rem 0.71428571rem 0.5rem 0.71428571rem;
-	line-height: @line-height-default;
-	text-align: center;
-	background-color: transparent;
-	outline: 0;
-	cursor: pointer;
-	font-family: inherit;
-	-webkit-appearance: none;
+  position: relative;
+  flex: 0 1 auto;
+  min-width: 3.57142857rem;
+  padding: 0.64285714rem 0.71428571rem 0.5rem 0.71428571rem;
+  line-height: @line-height-default;
+  text-align: center;
+  background-color: transparent;
+  outline: 0;
+  cursor: pointer;
+  font-family: inherit;
+  -webkit-appearance: none;
 
-	&:hover,
-	&:focus {
-		background-color: @default-color;
-	}
+  &:hover,
+  &:focus {
+    background-color: @default-color;
+  }
 
-	&:active {
-		background-color: @default-color-dark1;
-	}
+  &:active {
+    background-color: @default-color-dark1;
+  }
 
-	> .f-Icon {
-		font-size: 1.14285714rem;
-		color: @text-color-default;
-	}
+  >.f-Icon {
+    font-size: 1.14285714rem;
+    color: @text-color-default;
+  }
 }
 
 .f-CmdBtn-label {
-	font-size: 1rem;
-	color: @text-color-default;
+  font-size: 1rem;
+  color: @text-color-default;
 
-	&.right {
-		display: inline-block;
-		margin-left: 0.35714286rem;
-	}
+  &.right {
+    display: inline-block;
+    margin-left: 0.35714286rem;
+  }
 
-	&.bottom {
-		display: block;
-	}
+  &.bottom {
+    display: block;
+  }
 }

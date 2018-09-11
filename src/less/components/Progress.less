@@ -4,10 +4,10 @@
 
 
 .f-ProgressRing {
-	display: inline-block;
-	position: relative;
-	width: 1.42857143rem;
-	height: 1.42857143rem;
+  display: inline-block;
+  position: relative;
+  width: 1.42857143rem;
+  height: 1.42857143rem;
 }
 
 .f-ProgressRing-item0,
@@ -15,60 +15,60 @@
 .f-ProgressRing-item2,
 .f-ProgressRing-item3,
 .f-ProgressRing-item4 {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 0.14285714rem;
-	height: 0.14285714rem;
-	background: @primary-color;
-	opacity: 0;
-	border-radius: 50%;
-	transform-origin: 0px 0.71428571rem;
-	animation: f-anim-progress-ring 5s linear infinite normal forwards;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0.14285714rem;
+  height: 0.14285714rem;
+  background: @primary-color;
+  opacity: 0;
+  border-radius: 50%;
+  transform-origin: 0px 0.71428571rem;
+  animation: f-anim-progress-ring 5s linear infinite normal forwards;
 }
 
 .f-ProgressRing-item0 {
-	animation-delay: 0ms;
+  animation-delay: 0ms;
 }
 
 .f-ProgressRing-item1 {
-	animation-delay: 150ms;
+  animation-delay: 150ms;
 }
 
 .f-ProgressRing-item2 {
-	animation-delay: 300ms;
+  animation-delay: 300ms;
 }
 
 .f-ProgressRing-item3 {
-	animation-delay: 450ms;
+  animation-delay: 450ms;
 }
 
 .f-ProgressRing-item4 {
-	animation-delay: 650ms;
+  animation-delay: 650ms;
 }
 
 .f-ProgressBar {
-	display: block;
-	position: relative;
-	height: 0.14285714rem;
-	background-color: @default-color;
+  display: block;
+  position: relative;
+  height: 0.14285714rem;
+  background-color: @default-color;
 }
 
 .f-ProgressBar-percent {
-	display: block;
-	width: 0%;
-	height: 0.14285714rem;
-	background-color: @primary-color;
-	transition: width .2s;
+  display: block;
+  width: 0%;
+  height: 0.14285714rem;
+  background-color: @primary-color;
+  transition: width .2s;
 }
 
 .f-ProgressBar-indeterminate {
-	display: block;
-	position: relative;
-	height: 0.28571429rem;
-	line-height: 0.28571429rem;
-	background-color: transparent;
-	overflow: hidden;
+  display: block;
+  position: relative;
+  height: 0.28571429rem;
+  line-height: 0.28571429rem;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 .f-ProgressBar-item0,
@@ -76,86 +76,86 @@
 .f-ProgressBar-item2,
 .f-ProgressBar-item3,
 .f-ProgressBar-item4 {
-    position: absolute;
-    top: 0px;
-    left: -0.28571429rem;
-    width: 0.28571429rem;
-    height: 0.28571429rem;
-    border-radius: 0.28571429rem;
-	background-color: @primary-color;
-	animation: f-anim-progress-bar 4s cubic-bezier(0.25, 0.75, 0.75, 0.25) infinite;
+  position: absolute;
+  top: 0px;
+  left: -0.28571429rem;
+  width: 0.28571429rem;
+  height: 0.28571429rem;
+  border-radius: 0.28571429rem;
+  background-color: @primary-color;
+  animation: f-anim-progress-bar 4s cubic-bezier(0.25, 0.75, 0.75, 0.25) infinite;
 }
 
 .f-ProgressBar-item0 {
-	animation-delay: 0ms;
+  animation-delay: 0ms;
 }
 
 .f-ProgressBar-item1 {
-	animation-delay: 100ms;
+  animation-delay: 100ms;
 }
 
 .f-ProgressBar-item2 {
-	animation-delay: 200ms;
+  animation-delay: 200ms;
 }
 
 .f-ProgressBar-item3 {
-	animation-delay: 300ms;
+  animation-delay: 300ms;
 }
 
 .f-ProgressBar-item4 {
-	animation-delay: 400ms;
+  animation-delay: 400ms;
 }
 
 @keyframes f-anim-progress-ring {
-	0% {
-	    transform: rotateZ(0deg);
-	    opacity: 1;
-	}
-	12.5% {
-	    transform: rotateZ(180deg);
-	    opacity: 0.8;
-	}
-	25% {
-	    transform: rotateZ(270deg);
-	    opacity: 0.8;
-	}
-	37.5% {
-	    transform: rotateZ(300deg);
-	    opacity: 0.8;
-	}
-	50% {
-	    transform: rotateZ(360deg);
-	    opacity: 1;
-	}
-	62.5% {
-	    transform: rotateZ(540deg);
-	    opacity: 0;
-	}
-	75% {
-	    transform: rotateZ(630deg);
-	    opacity: 0;
-	}
-	87.5% {
-	    transform: rotateZ(660deg);
-	    opacity: 0;
-	}
-	100% {
-	    transform: rotateZ(720deg);
-	    opacity: 1;
-	}
+  0% {
+    transform: rotateZ(0deg);
+    opacity: 1;
+  }
+  12.5% {
+    transform: rotateZ(180deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: rotateZ(270deg);
+    opacity: 0.8;
+  }
+  37.5% {
+    transform: rotateZ(300deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotateZ(360deg);
+    opacity: 1;
+  }
+  62.5% {
+    transform: rotateZ(540deg);
+    opacity: 0;
+  }
+  75% {
+    transform: rotateZ(630deg);
+    opacity: 0;
+  }
+  87.5% {
+    transform: rotateZ(660deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(720deg);
+    opacity: 1;
+  }
 }
 
 @keyframes f-anim-progress-bar {
-	0% {
-    	left: -0.28571429rem;
-	}
-	15% {
-	    left: -0.28571429rem;
-	}
-	85% {
-	    left: 100%;
-	}
-	100% {
-	    left: 100%;
-	}
+  0% {
+    left: -0.28571429rem;
+  }
+  15% {
+    left: -0.28571429rem;
+  }
+  85% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
 }

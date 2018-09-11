@@ -11,54 +11,52 @@ export default class Icon extends React.Component {
 		const {
 			className,
 			name,
-            size,
-            color,
-            rotate,
+      size,
+      color,
+      rotate,
 			flip,
 			spin,
-            onClick
+      onClick
 		} = this.props;
         
-        return (
-            <i 
-            	className={cx(
-                    'f-Icon',
-                    'fa',
-            		`fa-${name}`,
-            		{
-            			[`fa-flip-${rotate}`]: !!rotate,
-                        [`fa-flip-${flip}`]: !!flip,
-            			'fa-spin': spin,
-            		},
-            		className
-            	)}
-                style={{
-                    fontSize: size,
-                    color
-                }}
-                onClick={onClick}
-            >
-            </i>
-        );
-    }
+    return (
+      <i 
+        className={cx(
+          'f-Icon',
+          'fa',
+          `fa-${name}`,
+          {
+            [`fa-flip-${rotate}`]: !!rotate,
+            [`fa-flip-${flip}`]: !!flip,
+            'fa-spin': spin,
+          },
+          className
+        )}
+        style={{
+          fontSize: size,
+          color
+        }}
+        onClick={onClick}
+      >
+      </i>
+    );
+  }
 }
 
 Icon.propTypes = {
+  
+  // Overwrite or extend the styles
+  className: PropTypes.string,
 
-    // Overwrite or extend the styles
-    className: PropTypes.string,
+  name: PropTypes.string,
 
-    name: PropTypes.string,
+  size: PropTypes.number,
 
-    size: PropTypes.number,
+  color: PropTypes.string,
 
-    color: PropTypes.string,
+  rotate: PropTypes.number,
 
-    rotate: PropTypes.number,
+  flip: PropTypes.oneOf(['horizontal', 'vertical']),
 
-    flip: PropTypes.oneOf(['horizontal', 'vertical']),
-
-    spin: PropTypes.bool
+  spin: PropTypes.bool
 };
-
-Icon.defaultProps = {};

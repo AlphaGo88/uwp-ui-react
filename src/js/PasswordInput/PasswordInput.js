@@ -16,11 +16,11 @@ export default class PasswordInput extends React.Component {
 
 	render() {
 		return (
-		    <InputBase
-		    	ref={node => this.node = node}
-		        type="password"
-		        {...this.props}
-		    />
+      <InputBase
+        ref={node => this.node = node}
+        type="password"
+        {...this.props}
+      />
 		);
 	}
 }

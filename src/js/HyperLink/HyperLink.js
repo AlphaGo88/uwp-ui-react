@@ -36,13 +36,10 @@ export default class HyperLink extends React.Component {
 }
 
 HyperLink.propTypes = {
+	// Overwrite or extend the styles
+	className: PropTypes.string,
 
-    // Overwrite or extend the styles
-    className: PropTypes.string,
+	underlined: PropTypes.bool,
 
-    underlined: PropTypes.bool,
-
-    disabled: PropTypes.bool
+	disabled: PropTypes.bool
 };
-
-HyperLink.defaultProps = {};

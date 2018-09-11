@@ -8,59 +8,57 @@ import cx from 'classnames';
 export default function InputField(props) {
 
 	const { 
-        className, 
-        width, 
-        fullWidth, 
-        header,
-        disabled, 
-        required,
-        children 
-    } = props;
+    className, 
+    width, 
+    fullWidth, 
+    header,
+    disabled, 
+    required,
+    children 
+  } = props;
 
-    return (
-    	<div
-    	    className={cx(
-    	        'f-Input-field',
-    	        { fullWidth },
-    	        className
-    	    )}
-    	    style={{ width }}
-    	>
-            {header &&
-                <div 
-                    className={cx(
-                        'f-Input-header',
-                        { disabled }
-                    )}
-                >
-                    {header}
-                    {required && 
-                        <span className="f-Input-asterisk">*</span>
-                    }
-                </div>
-            }
-    		{children}
-    	</div>
-    )
+  return (
+    <div
+      className={cx(
+        'f-Input-field',
+        { fullWidth },
+        className
+      )}
+      style={{ width }}
+    >
+      {header &&
+        <div 
+          className={cx(
+            'f-Input-header',
+            { disabled }
+          )}
+        >
+          {header}
+          {required && 
+            <span className="f-Input-asterisk">*</span>
+          }
+        </div>
+      }
+      {children}
+    </div>
+  )
 }
 
 InputField.propTypes = {
 
-    // Overwrite or extend the styles
-    className: PropTypes.string,
+  // Overwrite or extend the styles
+  className: PropTypes.string,
 
-    width: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-    ]),
+  width: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]),
 
-    fullWidth: PropTypes.bool,
+  fullWidth: PropTypes.bool,
 
-    header: PropTypes.string,
+  header: PropTypes.string,
 
-    disabled: PropTypes.bool,
+  disabled: PropTypes.bool,
 
-    required: PropTypes.bool
+  required: PropTypes.bool
 };
-
-InputField.defaultProps = {};

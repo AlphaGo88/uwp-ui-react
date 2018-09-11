@@ -3,106 +3,329 @@ import Code from '../util/code';
 import { TextInput } from '../../src/js/uwp-ui-react';
 
 export default class TextInputDemo extends React.Component {
+  constructor(props) {
+    super(props);
 
-    render() {
-
-        return (
-            <div>
-                <h2>Text Input</h2>
-                <section>
-                    <h4>Usage</h4>
-                    <Code disableToggle>
-{`import { TextInput } from 'uwp-ui-react';`}
-                    </Code>
-                </section>
-                <h4>Default Text Input</h4>
-                <section>
-                    <TextInput header="Basic" placeholder="I'm placeholder"/>
-                    <Code>
-{`<TextInput header="Basic" placeholder="I'm placeholder"/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Read only" readOnly value="I'm readonly"/>
-                    <Code>
-{`<TextInput header="Read only" readOnly value="I'm readonly"/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Disabled" disabled value="I'm disabled"/>
-                    <Code>
-{`<TextInput header="Disabled" disabled value="I'm disabled"/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Required" required/>
-                    <Code>
-{`<TextInput header="Required" required/>`}
-                    </Code>
-                </section>
-                <section>
-                	<TextInput header="Icon" leftIcon="user-o"/>
-                    <Code>
-{`<TextInput header="Icon" leftIcon="user-o"/>`}
-                    </Code>
-                </section>
-                <section>
-                	<TextInput header="Icon on the right" rightIcon="key" />
-                    <Code>
-{`<TextInput header="Icon on the right" rightIcon="key" />`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Prefix" prefix="https://"/>
-                    <Code>
-{`<TextInput header="Prefix" prefix="https://"/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Suffix" suffix="kg"/>
-                    <Code>
-{`<TextInput header="Suffix" suffix="kg"/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Error" defaultValue="Error" error/>
-                    <Code>
-{`<TextInput header="Error" defaultValue="Error" error/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Full width" fullWidth/>
-                    <Code>
-{`<TextInput header="Full width" fullWidth/>`}
-                    </Code>
-                </section>
-                <br/>
-                <h4>Underlined Text Input</h4>
-                <section>
-                    <TextInput header="Underlined" underlined/>
-                    <Code>
-{`<TextInput header="Underlined" underlined/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Icon" underlined leftIcon="search"/>
-                    <Code>
-{`<TextInput header="Icon" underlined leftIcon="search"/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Read only" underlined readOnly value="I'm readonly"/>
-                    <Code>
-{`<TextInput header="Read only" underlined readOnly value="I'm readonly"/>`}
-                    </Code>
-                </section>
-                <section>
-                    <TextInput header="Disabled" underlined disabled value="I'm disabled"/>
-                    <Code>
-{`<TextInput header="Disabled" underlined disabled value="I'm disabled"/>`}
-                    </Code>
-                </section>
-            </div>
-        )
+    this.state = {
+      text1: '',
+      text2: '',
+      text3: '',
+      text4: '',
+      text5: '',
+      text6: '',
+      text7: '',
+      text8: '',
+      text9: '',
+      text10: '',
     }
+  }
+
+  handleChange = (name, value) => {
+    this.setState({
+      [name]: value
+    })
+  }
+
+  render() {
+    const {
+      text1,
+      text2,
+      text3,
+      text4,
+      text5,
+      text6,
+      text7,
+      text8,
+      text9,
+      text10,
+    } = this.state;
+
+    return (
+      <div>
+        <h2>Text Input</h2>
+        <h4>Default Text Input</h4>
+        <section>
+          <TextInput 
+            header="Basic" 
+            placeholder="I'm placeholder"
+            name="text1"
+            value={text1}
+            onChange={this.handleChange} 
+          />
+        </section>
+        <section>
+          <TextInput header="Read only" readOnly value="I'm readonly"/>
+        </section>
+        <section>
+          <TextInput header="Disabled" disabled value="I'm disabled"/>
+        </section>
+        <section>
+          <TextInput 
+            header="Required" 
+            required
+            name="text2"
+            value={text2}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Icon" 
+            leftIcon="user-o"
+            name="text3"
+            value={text3}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Icon on the right" 
+            rightIcon="key"
+            name="text4"
+            value={text4}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Prefix" 
+            prefix="https://"
+            name="text5"
+            value={text5}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Suffix" 
+            prefix="kg"
+            name="text6"
+            value={text6}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Error" 
+            name="text7"
+            value={text7}
+            error
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Full width" 
+            name="text8"
+            value={text8}
+            fullWidth
+            onChange={this.handleChange}
+          />
+        </section>
+        <br/>
+        <h4>Underlined Text Input</h4>
+        <section>
+          <TextInput 
+            header="Underlined" 
+            name="text9"
+            value={text9}
+            underlined
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Icon" 
+            leftIcon="search"
+            name="text10"
+            value={text10}
+            underlined
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Read only" 
+            underlined 
+            readOnly 
+            value="I'm readonly" 
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Disabled" 
+            underlined 
+            disabled 
+            value="I'm disabled"
+          />
+        </section>
+        <Code>
+{`import React from 'react';
+import { TextInput } from 'uwp-ui-react';
+
+export default class TextInputDemo extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      text1: '',
+      text2: '',
+      text3: '',
+      text4: '',
+      text5: '',
+      text6: '',
+      text7: '',
+      text8: '',
+      text9: '',
+      text10: '',
+    }
+  }
+
+  handleChange = (name, value) => {
+    this.setState({
+      [name]: value
+    })
+  }
+  
+  render() {
+    const {
+      text1,
+      text2,
+      text3,
+      text4,
+      text5,
+      text6,
+      text7,
+      text8,
+      text9,
+      text10,
+    } = this.state;
+
+    return (
+      <div>
+        <h2>Text Input</h2>
+        <h4>Default Text Input</h4>
+        <section>
+          <TextInput 
+            header="Basic" 
+            placeholder="I'm placeholder"
+            name="text1"
+            value={text1}
+            onChange={this.handleChange} 
+          />
+        </section>
+        <section>
+          <TextInput header="Read only" readOnly value="I'm readonly"/>
+        </section>
+        <section>
+          <TextInput header="Disabled" disabled value="I'm disabled"/>
+        </section>
+        <section>
+          <TextInput 
+            header="Required" 
+            required
+            name="text2"
+            value={text2}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Icon" 
+            leftIcon="user-o"
+            name="text3"
+            value={text3}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Icon on the right" 
+            rightIcon="key"
+            name="text4"
+            value={text4}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Prefix" 
+            prefix="https://"
+            name="text5"
+            value={text5}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Suffix" 
+            prefix="kg"
+            name="text6"
+            value={text6}
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Error" 
+            name="text7"
+            value={text7}
+            error
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Full width" 
+            name="text8"
+            value={text8}
+            fullWidth
+            onChange={this.handleChange}
+          />
+        </section>
+        <br/>
+        <h4>Underlined Text Input</h4>
+        <section>
+          <TextInput 
+            header="Underlined" 
+            name="text9"
+            value={text9}
+            underlined
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Icon" 
+            leftIcon="search"
+            name="text10"
+            value={text10}
+            underlined
+            onChange={this.handleChange}
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Read only" 
+            underlined 
+            readOnly 
+            value="I'm readonly" 
+          />
+        </section>
+        <section>
+          <TextInput 
+            header="Disabled" 
+            underlined 
+            disabled 
+            value="I'm disabled"
+          />
+        </section>
+      </div>
+    )
+  }
+}`}
+        </Code>
+      </div>
+    )
+  }
 }

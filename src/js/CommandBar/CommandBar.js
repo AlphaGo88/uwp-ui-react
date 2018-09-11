@@ -8,35 +8,32 @@ import CommandBarContent from './CommandBarContent';
 
 export default class CommandBar extends React.Component {
 
-    render() {
-        const { 
-            className,
-            style,
-            children
-        } = this.props;
+  render() {
+    const { 
+      className,
+      style,
+      children
+    } = this.props;
 
-        return (
-            <div
-                className={cx(
-                    'f-CmdBar',
-                    className
-                )}
-                style={style}
-            >
-                {children}
-            </div>
-        );
-    }
+    return (
+      <div
+        className={cx(
+          'f-CmdBar',
+          className
+        )}
+        style={style}
+      >
+        {children}
+      </div>
+    );
+  }
 }
 
 CommandBar.propTypes = {
+  // Overwrite or extend the styles
+  className: PropTypes.string,
 
-    // Overwrite or extend the styles
-    className: PropTypes.string,
-
-    style: PropTypes.object,
+  style: PropTypes.object,
 };
-
-CommandBar.defaultProps = {};
 
 CommandBar.Content = CommandBarContent;

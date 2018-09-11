@@ -45,26 +45,23 @@ export default function GridCell(props) {
 }
 
 GridCell.propTypes = {
+	// Overwrite or extend the styles
+	className: PropTypes.string,
 
-    // Overwrite or extend the styles
-    className: PropTypes.string,
+	style: PropTypes.object,
 
-    style: PropTypes.object,
+	// If set, the cell's width is fixed by [px].
+	width: PropTypes.number,
 
-    // If set, the cell's width is fixed by [px].
-    width: PropTypes.number,
+	col: PropTypes.number,
 
-    col: PropTypes.number,
+	mdCol: PropTypes.number,
 
-    mdCol: PropTypes.number,
+	smCol: PropTypes.number,
 
-    smCol: PropTypes.number,
+	offset: PropTypes.number,
 
-    offset: PropTypes.number,
+	mdOffset: PropTypes.number,
 
-    mdOffset: PropTypes.number,
-
-    smOffset: PropTypes.number,
+	smOffset: PropTypes.number,
 };
-
-GridCell.defaultProps = {};

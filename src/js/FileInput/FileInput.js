@@ -10,155 +10,156 @@ import Icon from '../Icon';
 
 export default class FileInput extends React.Component {
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            value: '',
-            filenames: ''
-        };
-    }
+    this.state = {
+      value: '',
+      filenames: ''
+    };
+  }
 
-    handleBtnClick = () => {
-        this.fileInput.click();
-    }
+  handleBtnClick = () => {
+    this.fileInput.click();
+  }
 
-    handleChange = (event) => {
-        const files = event.target.files;
+  handleChange = (event) => {
+    const files = event.target.files;
 
-        this.setState({ 
-            value: event.target.value,
-            filenames: Array.prototype.map.call(files, f => f.name).join(', ')
-        }); 
-        this.props.onChange(files);
-    }
+    this.setState({
+      value: event.target.value,
+      filenames: Array.prototype.map.call(files, f => f.name).join(', ')
+    });
+    this.props.onChange(files);
+  }
 
-    clear = () => {
-        this.setState({
-            value: '', 
-            filenames: ''
-        }, () => {
-            this.props.onChange(this.fileInput.files);
-        });
-    }
+  clear = () => {
+    this.setState({
+      value: '',
+      filenames: ''
+    }, () => {
+      this.props.onChange(this.fileInput.files);
+    });
+  }
 
-    render() {
-        const { 
-            className,
-            width,
-            fullWidth,
-            header,
-            required,
-            name,
-            underlined,
-            error,
-            disabled,
-            buttonText,
-            onChange,
-            ...other
-        } = this.props;
+  render() {
+    const { 
+      className,
+      width,
+      fullWidth,
+      header,
+      required,
+      name,
+      underlined,
+      error,
+      disabled,
+      buttonText,
+      onChange,
+      ...other
+    } = this.props;
 
-        const { 
-            value,
-            filenames
-        } = this.state;
+    const { 
+      value,
+      filenames
+    } = this.state;
 
-        return (
-            <InputField
-                className={className}
-                width={width}
-                fullWidth={fullWidth}
-                header={header}
-                required={required}
-                disabled={disabled}
-            >
-                <div 
-                    className="f-FileInput-wrapper"
-                >
-                    <div 
-                        className={cx(
-                            'f-Input-wrapper',
-                            { 
-                                underlined,
-                                error,
-                                disabled
-                            }
-                        )}
-                    >
-                        <input 
-                            type="text"
-                            tabIndex={-1}
-                            value={filenames}
-                            disabled={disabled}
-                        />
-                        <input 
-                            {...other}
-                            ref={el => this.fileInput = el}
-                            name={name}
-                            type="file"
-                            value={value}
-                            tabIndex={-1}
-                            required={required}
-                            disabled={disabled}
-                            onChange={this.handleChange}
-                        />
-                        <Icon 
-                            name="times"
-                            className={cx(
-                                'f-FileInput-clear',
-                                { 'f-hidden': !filenames }
-                            )}
-                            onClick={this.clear}
-                        />
-                    </div>
-                    <Button
-                        className="f-FileInput-btn"
-                        disabled={disabled}
-                        onClick={this.handleBtnClick}
-                    >
-                        {buttonText}
-                    </Button>
-                </div>
-            </InputField>
-        );
-    }
+    return (
+      <InputField
+        className={className}
+        width={width}
+        fullWidth={fullWidth}
+        header={header}
+        required={required}
+        disabled={disabled}
+      >
+        <div 
+          className="f-FileInput-wrapper"
+        >
+          <div 
+            className={cx(
+              'f-Input-wrapper',
+              { 
+                underlined,
+                error,
+                disabled
+              }
+            )}
+          >
+            <input 
+              type="text"
+              tabIndex={-1}
+              readOnly
+              value={filenames}
+              disabled={disabled}
+            />
+            <input 
+              {...other}
+              ref={el => this.fileInput = el}
+              name={name}
+              type="file"
+              value={value}
+              tabIndex={-1}
+              required={required}
+              disabled={disabled}
+              onChange={this.handleChange}
+            />
+            <Icon 
+              name="times"
+              className={cx(
+                'f-FileInput-clear',
+                { 'f-hidden': !filenames }
+              )}
+              onClick={this.clear}
+            />
+          </div>
+          <Button
+            className="f-FileInput-btn"
+            disabled={disabled}
+            onClick={this.handleBtnClick}
+          >
+            {buttonText}
+          </Button>
+        </div>
+      </InputField>
+    );
+  }
 }
 
 FileInput.propTypes = {
 
-    // Overwrite or extend the styles
-    className: PropTypes.string,
+  // Overwrite or extend the styles
+  className: PropTypes.string,
 
-    width: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-    ]),
+  width: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]),
 
-    fullWidth: PropTypes.bool,
+  fullWidth: PropTypes.bool,
 
-    header: PropTypes.node,
+  header: PropTypes.node,
 
-    required: PropTypes.bool,
+  required: PropTypes.bool,
 
-    underlined: PropTypes.bool,
+  underlined: PropTypes.bool,
 
-    error: PropTypes.bool,
+  error: PropTypes.bool,
 
-    disabled: PropTypes.bool,
+  disabled: PropTypes.bool,
 
-    buttonText: PropTypes.node,
+  buttonText: PropTypes.node,
 
-    onChange: PropTypes.func
+  onChange: PropTypes.func
 };
 
 FileInput.defaultProps = {
 
-    buttonText: 'Browse...',
+  buttonText: 'Browse...',
 
-    /**
-     * Called when files change
-     * 
-     * @param {object} `files`
-     */
-    onChange: () => {}
+  /**
+   * Called when files change
+   * 
+   * @param {object} `files`
+   */
+  onChange: () => {}
 };

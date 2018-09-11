@@ -23,12 +23,12 @@ import React form 'react';
 import ReactDOM from 'react-dom';
 import { Button } from 'uwp-ui-react';
 
-import 'uwp-ui-react/lib/uwp-ui-react.css';  // You probably need webpack here.
+import 'uwp-ui-react/uwp-ui-react.css';
 
 function App() {
-	return (
-		<Button>My Button</Button>
-	);
+  return (
+    <Button>My Button</Button>
+  );
 }
 
 ReactDOM.render(<App/>, document.getElementById('app'));
