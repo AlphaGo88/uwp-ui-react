@@ -47,7 +47,7 @@ export default class ButtonDemo extends React.Component {
           </div>
         </section>
         <Code>
-{`import React from 'react';
+          {`import React from 'react';
 import { Button, Icon } from 'uwp-ui-react';
 
 export default class ButtonDemo extends React.Component {
@@ -98,6 +98,42 @@ export default class ButtonDemo extends React.Component {
   }
 }`}
         </Code>
+        <br />
+        <h3>Props</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>primary</td>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>fullWidth</td>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+              <td>If true, the button will take up the full width of the horizontal space.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     )
   }

@@ -137,3 +137,19 @@ section {
   border: 1px solid #ccc;
   background-color: #eee;
 }
+
+.prop-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prop-table th,
+.prop-table td {
+  padding: 6px 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.prop-table th {
+  background-color: #eee;
+}

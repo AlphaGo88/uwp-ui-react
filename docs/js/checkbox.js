@@ -59,7 +59,7 @@ export default class CheckboxDemo extends React.Component {
           &nbsp;&nbsp;&nbsp;&nbsp;
           <Checkbox
             label="Indeterminate"
-            checked={true}
+            checked
             indeterminate
           />
         </section>
@@ -156,7 +156,7 @@ export default class CheckboxDemo extends React.Component {
           />
           <Checkbox 
             label="Indeterminate" 
-            checked={true}
+            checked
             indeterminate
           />
         </section>
@@ -198,6 +198,118 @@ export default class CheckboxDemo extends React.Component {
   }
 }`}
         </Code>
+        <br/>
+        <h3>Props of Checkbox</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>name</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>The html name for the input[type="checkbox"].</td>
+            </tr>
+            <tr>
+              <td>label</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>disabled</td>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>checked</td>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+              <td>If true, the Checkbox is checked.</td>
+            </tr>
+            <tr>
+              <td>onChange</td>
+              <td>function</td>
+              <td></td>
+              <td></td>
+              <td>
+                Called when checked or unchecked.
+                <br/>
+                @param [string] `name` The name prop of the Checkbox
+                <br/>
+                @param [boolean] `checked`
+              </td>
+            </tr>
+          </tbody>          
+        </table>
+        <br/>
+        <h3>Props of CheckboxGroup</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>align</td>
+              <td>string</td>
+              <td></td>
+              <td>'horizontal'</td>
+              <td>
+                One of ['horizontal', 'vertical']
+              </td>
+            </tr>
+            <tr>
+              <td>value</td>
+              <td>array</td>
+              <td></td>
+              <td>[]</td>
+              <td>The checked values.</td>
+            </tr>
+            <tr>
+              <td>onChange</td>
+              <td>function</td>
+              <td></td>
+              <td></td>
+              <td>
+                Called when the value changes.
+                <br/>
+                @param [array] `value` The checked values.
+              </td>
+            </tr>
+          </tbody>          
+        </table>
       </div>
     )
   }

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 export default class CheckboxGroup extends React.Component {
-
+  
   handleChange = (itemValue, checked) => {
     const value = this.props.value.slice();
 
@@ -73,6 +73,8 @@ CheckboxGroup.propTypes = {
     'horizonal',
     'vertical'
   ]),
+
+  value: PropTypes.array,
 
   /**
    * Called when values change

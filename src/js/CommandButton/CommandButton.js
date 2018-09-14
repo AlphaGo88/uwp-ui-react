@@ -25,9 +25,8 @@ export default class CommandButton extends React.Component {
       onClick
     } = this.props;
 
-    const iconProps = typeof icon === 'string' ? {
-      name: icon
-    } : icon;
+    const iconProps = typeof icon === 'string' ? 
+      { name: icon } : icon;
 
     return (
       <div
@@ -44,8 +43,8 @@ export default class CommandButton extends React.Component {
         {label &&
           <div 
             className={cx(
-                'f-CmdBtn-label',
-                labelPosition
+              'f-CmdBtn-label',
+              labelPosition
             )}
           >
             {label}
@@ -66,7 +65,7 @@ CommandButton.propTypes = {
   icon: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
-  ]),
+  ]).isRequired,
 
   label: PropTypes.string,
 

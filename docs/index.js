@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route, NavLink, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch, NavLink, Redirect } from 'react-router-dom';
 import { Overlay, Icon } from '../src/js/uwp-ui-react';
 
-import Home from './js/home';
-import IconDoc from './js/iconDoc';
-import Install from './js/install';
+import Introduction from './js/introduction';
 import ButtonDemo from './js/button';
 import CheckboxDemo from './js/checkbox';
 import CommandBarDemo from './js/commandBar';
@@ -14,6 +12,7 @@ import DialogDemo from './js/dialog';
 import FileInputDemo from './js/fileInput';
 import FlyoutDemo from './js/flyout';
 import GridDemo from './js/grid';
+import IconDemo from './js/icon';
 import LinkDemo from './js/link';
 import MenuFlyoutDemo from './js/menuFlyout';
 import MessageDemo from './js/message';
@@ -41,23 +40,23 @@ class App extends React.Component {
 
   close = () => {
     this.setState({
-      navOpen: false 
+      navOpen: false
     });
   }
 
   open = (event) => {
     this.setState({
-      navOpen: true 
+      navOpen: true
     });
   }
 
   render() {
-    const { navOpen, page } = this.state;
+    const { navOpen } = this.state;
 
     return (
       <HashRouter>
         <div>
-          <Overlay 
+          <Overlay
             className="sidebar"
             isOpen={navOpen}
             onClose={this.close}
@@ -65,8 +64,7 @@ class App extends React.Component {
             <div>
               <h5>Get Started</h5>
               <ul>
-                <li><NavLink to="/install">Install</NavLink></li>
-                <li><NavLink to="/icon">Icon</NavLink></li>
+                <li><NavLink to="/intro">Introduction</NavLink></li>
               </ul>
               <h5>Components</h5>
               <ul>
@@ -79,6 +77,7 @@ class App extends React.Component {
                 <li><NavLink to="/flyout">Flyout</NavLink></li>
                 <li><NavLink to="/grid">Grid</NavLink></li>
                 <li><NavLink to="/hyperlink">HyperLink</NavLink></li>
+                <li><NavLink to="/icon">Icon</NavLink></li>
                 <li><NavLink to="/menuFlyout">Menu Flyout</NavLink></li>
                 <li><NavLink to="/message">Message</NavLink></li>
                 <li><NavLink to="/pagination">Pagination</NavLink></li>
@@ -102,34 +101,36 @@ class App extends React.Component {
               color="#fff"
               onClick={this.open}
             />
-            <span className="title">UWP UI REACT</span>
+            <span className="title">UWP UI React</span>
           </div>
           <div className="main">
-            <Route exact path="/" component={Home} />
-            <Route path="/install" component={Install} />
-            <Route path="/icon" component={IconDoc} />
-            <Route path="/button" component={ButtonDemo} />
-            <Route path="/checkbox" component={CheckboxDemo} />
-            <Route path="/commandbar" component={CommandBarDemo} />
-            <Route path="/datepicker" component={DatepickerDemo} />
-            <Route path="/dialog" component={DialogDemo} />
-            <Route path="/fileinput" component={FileInputDemo} />
-            <Route path="/flyout" component={FlyoutDemo} />
-            <Route path="/grid" component={GridDemo} />
-            <Route path="/hyperlink" component={LinkDemo} />
-            <Route path="/menuFlyout" component={MenuFlyoutDemo} />
-            <Route path="/message" component={MessageDemo} />
-            <Route path="/pagination" component={PaginationDemo} />
-            <Route path="/passwordInput" component={PasswordInputDemo} />
-            <Route path="/progress" component={ProgressDemo} />
-            <Route path="/radio" component={RadioDemo} />
-            <Route path="/search" component={SearchDemo} />
-            <Route path="/select" component={SelectDemo} />
-            <Route path="/tabs" component={TabsDemo} />
-            <Route path="/textarea" component={TextAreaDemo} />
-            <Route path="/textInput" component={TextInputDemo} />
-            <Route path="/timepicker" component={TimePickerDemo} />
-            <Route path="/toggle" component={ToggleDemo} />
+            <Switch>
+              <Route path="/intro" component={Introduction} />
+              <Redirect exact from="/" to="/intro" />
+              <Route path="/button" component={ButtonDemo} />
+              <Route path="/checkbox" component={CheckboxDemo} />
+              <Route path="/commandbar" component={CommandBarDemo} />
+              <Route path="/datepicker" component={DatepickerDemo} />
+              <Route path="/dialog" component={DialogDemo} />
+              <Route path="/fileinput" component={FileInputDemo} />
+              <Route path="/flyout" component={FlyoutDemo} />
+              <Route path="/grid" component={GridDemo} />
+              <Route path="/hyperlink" component={LinkDemo} />
+              <Route path="/icon" component={IconDemo} />
+              <Route path="/menuFlyout" component={MenuFlyoutDemo} />
+              <Route path="/message" component={MessageDemo} />
+              <Route path="/pagination" component={PaginationDemo} />
+              <Route path="/passwordInput" component={PasswordInputDemo} />
+              <Route path="/progress" component={ProgressDemo} />
+              <Route path="/radio" component={RadioDemo} />
+              <Route path="/search" component={SearchDemo} />
+              <Route path="/select" component={SelectDemo} />
+              <Route path="/tabs" component={TabsDemo} />
+              <Route path="/textarea" component={TextAreaDemo} />
+              <Route path="/textInput" component={TextInputDemo} />
+              <Route path="/timepicker" component={TimePickerDemo} />
+              <Route path="/toggle" component={ToggleDemo} />
+            </Switch>
           </div>
         </div>
       </HashRouter>

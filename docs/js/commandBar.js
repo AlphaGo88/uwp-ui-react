@@ -160,6 +160,122 @@ export default class CommandBarDemo extends React.Component {
   } 
 }`}
         </Code>
+        <br/>
+        <h3>Props of CommandBar</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>style</td>
+              <td>object</td>
+              <td></td>
+              <td></td>
+              <td>Inline styles.</td>
+            </tr>
+          </tbody>          
+        </table>
+        <br/>
+        <h3>Props of CommandBarContent</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>style</td>
+              <td>object</td>
+              <td></td>
+              <td></td>
+              <td>Inline styles.</td>
+            </tr>
+          </tbody>          
+        </table>
+        <br/>
+        <h3>Props of CommandButton</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>style</td>
+              <td>object</td>
+              <td></td>
+              <td></td>
+              <td>Inline styles.</td>
+            </tr>
+            <tr>
+              <td>icon</td>
+              <td>string | object</td>
+              <td>yes</td>
+              <td></td>
+              <td>Icon name or icon props.</td>
+            </tr>
+            <tr>
+              <td>label</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>The button's label</td>
+            </tr>
+            <tr>
+              <td>labelPosition</td>
+              <td>string</td>
+              <td></td>
+              <td>'bottom'</td>
+              <td>One of ['right, bottom'].</td>
+            </tr>
+            <tr>
+              <td>onClick</td>
+              <td>function</td>
+              <td></td>
+              <td></td>
+              <td>Called when clicking the button.</td>
+            </tr>
+          </tbody>          
+        </table>
+        <br/>
       </div>
     )
   }

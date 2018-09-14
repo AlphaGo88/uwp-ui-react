@@ -103,6 +103,7 @@ Checkbox.propTypes = {
   /**
    * Fires when checked or unchecked.
    * 
+   * @param {string} `name`
    * @param {boolean} `checked`
    */
   onChange: PropTypes.func,
