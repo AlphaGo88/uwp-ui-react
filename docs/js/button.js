@@ -122,15 +122,22 @@ export default class ButtonDemo extends React.Component {
               <td>primary</td>
               <td>bool</td>
               <td></td>
-              <td></td>
-              <td></td>
+              <td>false</td>
+              <td>If true, the button's color style is 'primary'.</td>
             </tr>
             <tr>
               <td>fullWidth</td>
               <td>bool</td>
               <td></td>
-              <td></td>
+              <td>false</td>
               <td>If true, the button will take up the full width of the horizontal space.</td>
+            </tr>
+            <tr>
+              <td>...</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Other props that html button supports.</td>
             </tr>
           </tbody>
         </table>

@@ -236,14 +236,14 @@ export default class CheckboxDemo extends React.Component {
               <td>disabled</td>
               <td>bool</td>
               <td></td>
-              <td></td>
+              <td>false</td>
               <td></td>
             </tr>
             <tr>
               <td>checked</td>
               <td>bool</td>
               <td></td>
-              <td></td>
+              <td>false</td>
               <td>If true, the Checkbox is checked.</td>
             </tr>
             <tr>
