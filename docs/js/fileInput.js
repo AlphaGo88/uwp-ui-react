@@ -63,6 +63,9 @@ export default class FileInputDemo extends React.Component {
         <section>
           <FileInput header="Error" error />
         </section>
+        <section>
+          <FileInput header="FullWidth" fullWidth />
+        </section>
       </div>
     );
   }
