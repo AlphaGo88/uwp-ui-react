@@ -30,6 +30,9 @@ export default class FileInputDemo extends React.Component {
         <section>
           <FileInput header="Error" error />
         </section>
+        <section>
+          <FileInput header="FullWidth" fullWidth />
+        </section>
         <Code>
 {`import React from 'react';
 import { FileInput } from 'uwp-ui-react';
