@@ -1,6 +1,7 @@
 {
   "name": "uwp-ui-react",
   "author": "zhao xin<83268606@qq.com>",
+  "version": "0.1.0",
   "description": "UWP style web ui components",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --config webpack.config.dev.js --host 0.0.0.0 --mode development",
