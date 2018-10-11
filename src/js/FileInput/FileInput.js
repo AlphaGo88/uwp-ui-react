@@ -33,7 +33,11 @@ export default class FileInput extends React.Component {
     this.props.onChange(files);
   }
 
-  clear = () => {
+  handleClearBtnClick = () => {
+    this.clear();
+  }
+
+  clear() {
     this.setState({
       value: '',
       filenames: ''
@@ -109,7 +113,7 @@ export default class FileInput extends React.Component {
                 'f-FileInput-clear',
                 { 'f-hidden': !filenames }
               )}
-              onClick={this.clear}
+              onClick={this.handleClearBtnClick}
             />
           </div>
           <Button
