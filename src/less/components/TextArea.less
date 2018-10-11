@@ -9,7 +9,7 @@
   font-weight: 400;
   font-family: inherit;
   color: @text-color-default;
-  background-color: #fff;
+  background-color: transparent;
   border: 0.07142857rem solid @input-border-color;
   border-radius: 0;
   outline: 0;
@@ -40,6 +40,22 @@
     color: @text-color-disabled  !important;
     cursor: @cursor-disabled;
     pointer-events: none;
+  }
+}
+
+.f-TextArea.underlined {
+  padding-left: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+
+  &:focus {
+    background-color: transparent;
+  }
+  
+  &[disabled],
+  &.disabled {
+    background-color: transparent !important;
   }
 }
 

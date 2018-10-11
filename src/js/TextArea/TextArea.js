@@ -10,6 +10,7 @@ export default class TextArea extends React.Component {
 
   handleChange = (event) => {
     const {
+      name,
       autoHeight,
       onChange
     } = this.props;
@@ -20,7 +21,7 @@ export default class TextArea extends React.Component {
         this.el.style.height = event.target.scrollHeight + 3 + 'px';
       }
     }
-    onChange(this.props.name, event.target.value);
+    onChange(name, event.target.value);
   }
 
   render() {

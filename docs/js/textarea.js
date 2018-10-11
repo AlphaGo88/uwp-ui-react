@@ -16,10 +16,13 @@ export default class TextAreaDemo extends React.Component {
       text6: '',
       text7: '',
       text8: '',
+      text9: '',
     }
   }
 
-  onChange = (name, value) => {
+  handleChange = (name, value) => {
+    console.log(name);
+    
     this.setState({
       [name]: value
     })
@@ -35,6 +38,7 @@ export default class TextAreaDemo extends React.Component {
       text6,
       text7,
       text8,
+      text9,
     } = this.state;
 
     return (
@@ -43,6 +47,7 @@ export default class TextAreaDemo extends React.Component {
         <section>
           <TextArea
             header="Basic"
+            name="text1"
             value={text1}
             onChange={this.handleChange} />
         </section>
@@ -50,6 +55,7 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Min height"
             minHeight={70}
+            name="text2"
             value={text2}
             onChange={this.handleChange} />
         </section>
@@ -57,6 +63,7 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Rows"
             rows={4}
+            name="text3"
             value={text3}
             onChange={this.handleChange} />
         </section>
@@ -64,6 +71,7 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Not resizeable"
             resize="none"
+            name="text4"
             value={text4}
             onChange={this.handleChange} />
         </section>
@@ -71,6 +79,7 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Auto adjust height"
             autoHeight
+            name="text5"
             value={text5}
             onChange={this.handleChange} />
         </section>
@@ -78,13 +87,15 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Required"
             required
+            name="text6"
             value={text6}
             onChange={this.handleChange} />
         </section>
         <section>
           <TextArea
             header="Error status"
-            status="error"
+            error
+            name="text7"
             value={text7}
             onChange={this.handleChange} />
         </section>
@@ -98,7 +109,16 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Full width"
             fullWidth
+            name="text8"
             value={text8}
+            onChange={this.handleChange} />
+        </section>
+        <section>
+          <TextArea
+            header="Underlined"
+            name="text9"
+            value={text9}
+            underlined
             onChange={this.handleChange} />
         </section>
         <Code>
@@ -145,6 +165,7 @@ export default class TextAreaDemo extends React.Component {
         <section>
           <TextArea
             header="Basic"
+            name="text1"
             value={text1}
             onChange={this.handleChange} />
         </section>
@@ -152,6 +173,7 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Min height"
             minHeight={70}
+            name="text2"
             value={text2}
             onChange={this.handleChange} />
         </section>
@@ -159,6 +181,7 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Rows"
             rows={4}
+            name="text3"
             value={text3}
             onChange={this.handleChange} />
         </section>
@@ -166,6 +189,7 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Not resizeable"
             resize="none"
+            name="text4"
             value={text4}
             onChange={this.handleChange} />
         </section>
@@ -173,6 +197,7 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Auto adjust height"
             autoHeight
+            name="text5"
             value={text5}
             onChange={this.handleChange} />
         </section>
@@ -180,13 +205,15 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Required"
             required
+            name="text6"
             value={text6}
             onChange={this.handleChange} />
         </section>
         <section>
           <TextArea
             header="Error status"
-            status="error"
+            error
+            name="text7"
             value={text7}
             onChange={this.handleChange} />
         </section>
@@ -200,7 +227,16 @@ export default class TextAreaDemo extends React.Component {
           <TextArea
             header="Full width"
             fullWidth
+            name="text8"
             value={text8}
+            onChange={this.handleChange} />
+        </section>
+        <section>
+          <TextArea
+            header="Underlined"
+            name="text9"
+            value={text9}
+            underlined
             onChange={this.handleChange} />
         </section>
       </div>
