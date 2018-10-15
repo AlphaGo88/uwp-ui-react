@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/js/uwp-ui-react.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'uwp-ui-react.js',
+    filename: 'uwp-ui-react.umd.js',
     libraryTarget: 'commonjs2'
   },
   externals: {
