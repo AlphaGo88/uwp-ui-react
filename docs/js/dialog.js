@@ -202,6 +202,81 @@ export default class DialogDemo extends React.Component {
   }
 }`}
         </Code>
+        <br />
+        <h3>Props</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>number | string</td>
+              <td></td>
+              <td></td>
+              <td>Set the width e.g. 200, '50%'</td>
+            </tr>
+            <tr>
+              <td>isOpen</td>
+              <td>bool</td>
+              <td></td>
+              <td>false</td>
+              <td>Whether the dialog is open.</td>
+            </tr>
+            <tr>
+              <td>title</td>
+              <td>node</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>closeButtonText</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>primaryButtonText</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>secondaryButtonText</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>onButtonClick</td>
+              <td>function</td>
+              <td></td>
+              <td></td>
+              <td>
+                Called when one of the buttons clicked.
+                <br/>
+                @param [string] `result` The clicked button: 'primary', 'secondary' or 'close'
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     )
   }
