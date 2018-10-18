@@ -178,21 +178,21 @@ export default class DatePickerDemo extends React.Component {
             </tr>
             <tr>
               <td>underlined</td>
-              <td>boolean</td>
+              <td>bool</td>
               <td></td>
               <td>false</td>
               <td>True to display underlined style.</td>
             </tr>
             <tr>
               <td>required</td>
-              <td>boolean</td>
+              <td>bool</td>
               <td></td>
               <td>false</td>
               <td></td>
             </tr>
             <tr>
               <td>disabled</td>
-              <td>boolean</td>
+              <td>bool</td>
               <td></td>
               <td>false</td>
               <td></td>
@@ -213,7 +213,7 @@ export default class DatePickerDemo extends React.Component {
             </tr>
             <tr>
               <td>disableClear</td>
-              <td>boolean</td>
+              <td>bool</td>
               <td></td>
               <td>false</td>
               <td>If true, the clear button is disabled.</td>
@@ -227,6 +227,7 @@ export default class DatePickerDemo extends React.Component {
                 Disable dates that satisfy the test function.
                 <br/>
                 @param [Date] `date` The date object.
+                <br/>
                 @return [bool]
               </td>
             </tr>
@@ -239,6 +240,7 @@ export default class DatePickerDemo extends React.Component {
                 Called when the value changes.
                 <br/>
                 @param [string] `name` The 'name' prop.
+                <br/>
                 @param [string] `value` The date value.
               </td>
             </tr>

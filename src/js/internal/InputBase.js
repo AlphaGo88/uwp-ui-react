@@ -159,10 +159,19 @@ InputBase.propTypes = {
   // Underlined style
   underlined: PropTypes.bool,
 
-  icon: PropTypes.oneOfType([
+  leftIcon: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
   ]),
+
+  rightIcon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]),
+
+  prefix: PropTypes.node,
+
+  suffix: PropTypes.node,
 
   // Show error status
   error: PropTypes.bool,

@@ -123,7 +123,7 @@ export default class MenuFlyoutDemo extends React.Component {
           </MenuFlyout>
         </section>
         <Code>
-{`import React from 'react';
+          {`import React from 'react';
 import ReactDOM from 'react-dom';
 import { 
   Button, 
@@ -250,6 +250,163 @@ export default class MenuFlyoutDemo extends React.Component {
   }
 }`}
         </Code>
+        <br />
+        <h3>Props of MenuFlyout</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>style</td>
+              <td>object</td>
+              <td></td>
+              <td>false</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>anchorEl</td>
+              <td>object</td>
+              <td>yes</td>
+              <td></td>
+              <td>The anchor dom node. The flyout will be positioned according to it.</td>
+            </tr>
+            <tr>
+              <td>isOpen</td>
+              <td>bool</td>
+              <td></td>
+              <td>false</td>
+              <td>Whether the menu flyout is open.</td>
+            </tr>
+            <tr>
+              <td>onClose</td>
+              <td>function</td>
+              <td></td>
+              <td></td>
+              <td>Called when the menu flyout is closed.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <h3>Props of MenuItem</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>text</td>
+              <td>string</td>
+              <td>yes</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>secondaryText</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>icon</td>
+              <td>string | object</td>
+              <td></td>
+              <td></td>
+              <td>icon name or object of icon props.</td>
+            </tr>
+            <tr>
+              <td>reserveSpace</td>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+              <td>Set this prop `true` when the menu item doesn't have an icon but others have one.</td>
+            </tr>
+            <tr>
+              <td>href</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>An url link. This makes the menu item a hyperlink.</td>
+            </tr>
+            <tr>
+              <td>target</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Only applies when `href` is set. The target of the hyperlink.</td>
+            </tr>
+            <tr>
+              <td>onClick</td>
+              <td>function</td>
+              <td></td>
+              <td></td>
+              <td>Called when the menu item is clicked.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <h3>Props of MenuItemHeader</h3>
+        <table className="prop-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>className</td>
+              <td>string</td>
+              <td></td>
+              <td></td>
+              <td>Overwrite or extend the styles.</td>
+            </tr>
+            <tr>
+              <td>text</td>
+              <td>string</td>
+              <td>yes</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>icon</td>
+              <td>string | object</td>
+              <td></td>
+              <td></td>
+              <td>icon name or object of icon props.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     )
   }

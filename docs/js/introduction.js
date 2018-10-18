@@ -52,6 +52,22 @@ ReactDOM.render(<App/>, document.getElementById('app'));`}
 					</Code>
 				</div>
         <br/>
+        <h4>Build</h4>
+        <div>
+          If you are using <HyperLink href="https://webpack.github.io/" target="_blank">Webpack</HyperLink>, the following loaders are required:
+          <br/><br/>
+          <mark>css-loader</mark>  
+          <br/><br/>
+          <mark>babel-loader</mark>
+          <br/><br/>
+          Uwp-ui-react is written is ES6 and react, thus the flowing presets are required:
+          <br/><br/>
+          <mark>env</mark> 
+          <br/><br/>
+          <mark>stage-2(or higher)</mark> 
+          <br/><br/>
+          <mark>react</mark>
+        </div>
       </div>
     )
   }

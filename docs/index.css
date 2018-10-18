@@ -110,6 +110,12 @@ section {
   margin-bottom: 30px;
 }
 
+mark {
+  padding: 2px;
+  border-radius: 3px;
+  background-color: rgb(187, 220, 247) !important;
+}
+
 .code-header {
   margin: 0 0 -5px 0;
   text-align: right;

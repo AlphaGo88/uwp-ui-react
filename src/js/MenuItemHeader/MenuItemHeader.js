@@ -9,7 +9,6 @@ import Icon from '../Icon';
 export default function MenuItemHeader(props) {
   const { 
     className,
-    style,
     text,
     icon
   } = props;
@@ -23,7 +22,6 @@ export default function MenuItemHeader(props) {
         'f-MenuItem-header',
         className
       )}
-      style={style}
     >
       {icon &&
         <Icon 
@@ -39,8 +37,6 @@ MenuItemHeader.propTypes = {
 
   // Overwrite or extend the styles
   className: PropTypes.string,
-
-  style: PropTypes.object,
 
   text: PropTypes.node,
 
